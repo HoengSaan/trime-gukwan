@@ -3120,7 +3120,7 @@ preset_keyboards:
   gukwan-guzan-hoizau:
     import_preset: gukwan
   
-  gukwan_gwanon:
+  gukwan-gwanaan:
     import_preset: gukwan
 
   gukwan-longmong:

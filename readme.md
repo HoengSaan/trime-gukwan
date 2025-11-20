@@ -20,6 +20,8 @@ This work is licensed under a
 - 菊韻粵語：[rime-gukwan: 菊韻粵語輸入方案 基於中州韻 Cantonese IME (RIME Scheme)](https://github.com/HoengSaan/rime-gukwan)
 - 菊韻和語：[rime-kikwin: 菊韻日本語入力法 基於中州韻 Japanese IME (RIME Scheme)](https://github.com/HoengSaan/rime-kikwin)
 
+**1.1b：九宮格鍵盤測試（gukwan.trime.yaml）**
+
 ## 介紹
 
 菊韻使用36+鍵佈局（QWERTY字母鍵26個＋一行數字鍵10個），配色多樣，自帶多種鍵盤，適配多種佈局。
@@ -62,9 +64,10 @@ This work is licensed under a
 - 倉頡：36鍵，適配[五代倉頡](https://github.com/rime/rime-cangjie)｜[六代倉頡](https://github.com/LEOYoon-Tsaw/Cangjie6)｜[速成]([rime/rime-quick: [速成]輸入方案](https://github.com/rime/rime-quick))｜[微軟速成](https://github.com/philipposkhos/rime-ms-quick)
 - 注音：40鍵，適配[大千式注音](https://github.com/rime/rime-bopomofo)
 - 行列：40鍵，適配[行列30](https://github.com/rime/rime-array/blob/master/array30.schema.yaml)
-- 普雙：36鍵，自然碼｜小鶴【限菊韵，須手動進行適配】
+- 普雙：36鍵，自然碼｜小鶴【限菊韵】
+- 九宮：9鍵，萬象九宮格｜霧凇九宮格｜菊韻九宮格（測試中，僅`gukwan.trime.yaml`可用，對應符號鍵盤未製作）
 
-適配方式如下：
+默認只有部分方案，手動適配方式如下：
 
 ```yaml
   my_cangjie:
@@ -87,7 +90,7 @@ This work is licensed under a
 | ![](/pic/11.jpg)                             | ![](/pic/12.jpg)                                     |
 | 編輯鍵盤（薰衣草｜紫色深色）                 | 數字鍵盤（紫藤｜紫色深色）                           |
 | ![](/pic/13.jpg)                             | ![](/pic/14.jpg)                                     |
-| 倉頡鍵盤（菊韻｜其他色）                     | 特殊鍵盤（冶遊｜其他色）                             |
+| 倉頡鍵盤（菊韻｜其他色）                     | 注音鍵盤（冶遊｜其他色）                             |
 
 其他鍵盤佈局同配色方案請自行探索。
 

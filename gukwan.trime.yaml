@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: '1.0'
+config_version: '1.1'
 name: 菊韻
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -3012,7 +3012,7 @@ preset_keyboards:
   gukwan-guzan-hoizau:
     import_preset: gukwan
   
-  gukwan_gwanon:
+  gukwan-gwanaan:
     import_preset: gukwan
 
   gukwan-longmong:
@@ -3373,3 +3373,44 @@ preset_keyboards:
       - {click: '-', swipe_down: {commit: '_'}, key_text_color: one_color}
       - {click: BackSpace, width: 12.5, swipe_down: Delete, hint: '⇨', key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: Return, width: 12.5, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
+
+  t9:
+    name: 九宮格鍵盤
+    author: 'Hoengsaan (Lingdai)'
+    ascii_mode: 0
+    reset_ascii_mode: true
+    width: 20
+    height: 47
+    keys:
+      #第一行
+      - {click: Keyboard_clipboard, label: '剪貼', swipe_up: Keyboard_emoji, swipe_down: Keyboard_kaomoji, hint: '顏文字', width: 10}
+      - {click: Keyboard_editor, long_click: Keyboard_Greek, swipe_left: Keyboard_Hiragana, swipe_right: Keyboard_Katakana, hint: 'あ   ア', width: 10}
+      - {click: '1', hint: '1', label: '符號', repeatable: true, composing: Keyboard_fancy, key_text_size: 24}
+      - {click: '2', hint: '2', label: 'ABC', repeatable: true, key_text_size: 24}
+      - {click: '3', hint: '3', label: 'DEF', repeatable: true, key_text_size: 24}
+      - {click: BackSpace, swipe_down: Delete, hint: '⇨', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      #第二行
+      - {click: Left, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color, key_text_size: 24}
+      - {click: '4', hint: '4', label: 'GHI', repeatable: true, key_text_size: 24}
+      - {click: '5', hint: '5', label: 'JKL', repeatable: true, key_text_color: on_key_text_color, key_text_size: 24}
+      - {click: '6', hint: '6', label: 'MNO', repeatable: true, key_text_size: 24}
+      - {click: Right, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color, key_text_size: 24}
+      #第三行
+      - {click: Shift_L, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: '7', hint: '7', label: 'PQRS', repeatable: true, key_text_size: 24}
+      - {click: '8', hint: '8', label: 'TUV', repeatable: true, key_text_size: 24}
+      - {click: '9', hint: '9', label: 'WXYZ', repeatable: true, key_text_size: 24}
+      - {click: Alt_space}
+      #第四行
+      - {click: Keyboard_basic_symbol, width: 12.5, key_text_offset_y: 0, long_click: Theme_settings, swipe_down: Color_switch, hint: '配色', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: Schema_switch, width: 12.5, key_text_offset_y: 0, long_click: IME_switch, swipe_down: Menu, hint: '方案', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: ',', width: 12.5, label: ，, long_click: '、', swipe_up: '、', key_text_color: one_color}
+      - {click: 0, width: 30, repeatable: true, key_text_size: 24, hint: '菊韻九宮格測試'}
+      - {click: '.', width: 12.5, label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '・', key_text_color: one_color}
+      - {click: Return, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
+
+  wanxiang_t9:
+    import_preset: tg
+
+  jyut6ping3-gw-t9:
+    import_preset: t9
