@@ -20,8 +20,6 @@ This work is licensed under a
 - 菊韻粵語：[rime-gukwan: 菊韻粵語輸入方案 基於中州韻 Cantonese IME (RIME Scheme)](https://github.com/HoengSaan/rime-gukwan)
 - 菊韻和語：[rime-kikwin: 菊韻日本語入力法 基於中州韻 Japanese IME (RIME Scheme)](https://github.com/HoengSaan/rime-kikwin)
 
-**1.1b：九宮格鍵盤測試（gukwan.trime.yaml）**
-
 ## 介紹
 
 菊韻使用36+鍵佈局（QWERTY字母鍵26個＋一行數字鍵10個），配色多樣，自帶多種鍵盤，適配多種佈局。
@@ -65,7 +63,7 @@ This work is licensed under a
 - 注音：40鍵，適配[大千式注音](https://github.com/rime/rime-bopomofo)
 - 行列：40鍵，適配[行列30](https://github.com/rime/rime-array/blob/master/array30.schema.yaml)
 - 普雙：36鍵，自然碼｜小鶴【限菊韵】
-- 九宮：9鍵，萬象九宮格｜霧凇九宮格｜菊韻九宮格（測試中，僅`gukwan.trime.yaml`可用，對應符號鍵盤未製作）
+- 九宮：9鍵，萬象九宮格｜霧凇九宮格｜菊韻九宮格
 
 默認只有部分方案，手動適配方式如下：
 
