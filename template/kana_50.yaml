@@ -78,7 +78,7 @@
       #第六行
       - {click: Keyboard_Katakana, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: '、', width: 10}
-      - {click: space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '゙', label: '゛', width: 10}
       - {click: '゚', label: '゜', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
@@ -91,7 +91,7 @@
       - {click: Keyboard_Hiragana_Selected, width: 14.5, key_text_size: 12, key_back_color: enter_bg_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: Keyboard_Hangul, width: 14.5, key_text_size: 12, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}   
       - {width: 6.5}
-          
+        
   Katakana:
     name: 片假名五十音圖輸入
     author: 'Hoengsaan (Lingdai)'
@@ -172,7 +172,7 @@
       #第六行
       - {click: Keyboard_Hiragana, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: '、', width: 10}
-      - {click: space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '゙', label: '゛', width: 10}
       - {click: '゚', label: '゜', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}

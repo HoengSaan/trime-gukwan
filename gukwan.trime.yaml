@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: '2.0'
+config_version: '2.1'
 name: 菊韻
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -2083,7 +2083,7 @@ preset_keyboards:
       - {click: Keyboard_default, long_click: Settings, width: 12.5, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: Keyboard_number, long_click: Gukwan_readme, width: 12.5, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: '‹', long_click: '«'}
-      - {click: space, width: 27, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 27, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '›', long_click: '»'}
       - {click: '.', long_click: '…'}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
@@ -2135,7 +2135,7 @@ preset_keyboards:
       - {click: Keyboard_default, long_click: Settings, width: 12.5, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: Keyboard_number, long_click: Gukwan_readme, width: 12.5, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: '≪', key_text_size: 16}
-      - {click: space, width: 27, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 27, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '≫', key_text_size: 16}
       - {click: '.', long_click: '…'}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
@@ -2185,7 +2185,7 @@ preset_keyboards:
       #第四行
       - {click: Keyboard_Greek_symbol, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', long_click: '«'}
-      - {click: space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.', long_click: '»'}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第五行
@@ -2242,7 +2242,7 @@ preset_keyboards:
       #第四行
       - {click: Keyboard_Greek, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', long_click: '«'}
-      - {click: space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.', long_click: '»'}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第五行
@@ -2309,7 +2309,7 @@ preset_keyboards:
       #第四行
       - {click: Keyboard_Cyrillic_symbol, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', width: 10}
-      - {click: space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第五行
@@ -2366,7 +2366,7 @@ preset_keyboards:
       #第四行
       - {click: Keyboard_Cyrillic, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', width: 10}
-      - {click: space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第五行
@@ -2459,7 +2459,7 @@ preset_keyboards:
       #第六行
       - {click: Keyboard_IPA_symbol_1, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'ˈ', width: 10}
-      - {click: space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: IPA_aspirated, width: 10}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
@@ -2551,7 +2551,7 @@ preset_keyboards:
       #第六行
       - {click: Keyboard_IPA_symbol_1, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'ˈ', width: 10}
-      - {click: space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: IPA_aspirated, width: 10}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
@@ -2645,7 +2645,7 @@ preset_keyboards:
       #第六行
       - {click: Keyboard_IPA_symbol_1, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'ˈ', width: 10}
-      - {click: space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: IPA_aspirated, width: 10}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
@@ -2703,7 +2703,7 @@ preset_keyboards:
       #第四行
       - {click: Keyboard_IPA, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ','}
-      - {click: space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.'}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第五行
@@ -2760,7 +2760,7 @@ preset_keyboards:
       #第四行
       - {click: Keyboard_IPA, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: IPA_tie_bar_above, width: 12.5}
-      - {click: space, width: 44, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, width: 44, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: IPA_tie_bar_below, width: 12.5}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第五行
@@ -2898,7 +2898,7 @@ preset_keyboards:
       #第四行
       - {click: Nothing, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', label: ，, long_click: '、', swipe_up: '、', key_text_color: one_color}
-      - {click: space, hint: '有限度支持古諺文', width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
+      - {click: Alt_space, hint: '有限度支持古諺文', width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '･', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第五行
