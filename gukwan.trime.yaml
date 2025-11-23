@@ -3387,21 +3387,21 @@ preset_keyboards:
     keys:
       #第一行
       - {click: Keyboard_clipboard, label: '剪貼', swipe_up: Keyboard_emoji, swipe_down: Keyboard_kaomoji, hint: '顏文字', key_text_size: 24}
-      - {click: '1', hint: '1', label: '符號', swipe_down: {commit: '1'}, repeatable: true, composing: Keyboard_fancy, key_text_size: 24}
-      - {click: '2', hint: '2', label: 'ABC', swipe_down: {commit: '2'}, repeatable: true, key_text_size: 24}
-      - {click: '3', hint: '3', label: 'DEF', swipe_down: {commit: '3'}, repeatable: true, key_text_size: 24}
+      - {click: '1', hint: '1', label: '符號', swipe_down: '1', repeatable: true, composing: Keyboard_fancy, key_text_size: 24}
+      - {click: '2', hint: '2', label: 'ABC', swipe_down: '2', repeatable: true, key_text_size: 24}
+      - {click: '3', hint: '3', label: 'DEF', swipe_down: '3', repeatable: true, key_text_size: 24}
       - {click: BackSpace, swipe_down: Delete, hint: '⇨', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第二行
       - {click: Left, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color, key_text_size: 24}
-      - {click: '4', hint: '4', label: 'GHI', swipe_down: {commit: '4'}, repeatable: true, key_text_size: 24}
-      - {click: '5', hint: '5', label: 'JKL', swipe_down: {commit: '5'}, repeatable: true, key_text_color: on_key_text_color, key_text_size: 24}
-      - {click: '6', hint: '6', label: 'MNO', swipe_down: {commit: '6'}, repeatable: true, key_text_size: 24}
+      - {click: '4', hint: '4', label: 'GHI', swipe_down: '4', repeatable: true, key_text_size: 24}
+      - {click: '5', hint: '5', label: 'JKL', swipe_down: '5', repeatable: true, key_text_color: on_key_text_color, key_text_size: 24}
+      - {click: '6', hint: '6', label: 'MNO', swipe_down: '6', repeatable: true, key_text_size: 24}
       - {click: Right, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color, key_text_size: 24}
       #第三行
       - {click: Keyboard_editor, long_click: Keyboard_Greek, swipe_left: Keyboard_Hiragana, swipe_right: Keyboard_Katakana, hint: 'あ   ア', key_text_size: 24}
-      - {click: '7', hint: '7', label: 'PQRS', swipe_down: {commit: '7'}, repeatable: true, key_text_size: 24}
-      - {click: '8', hint: '8', label: 'TUV', swipe_down: {commit: '8'}, repeatable: true, key_text_size: 24}
-      - {click: '9', hint: '9', label: 'WXYZ', swipe_down: {commit: '9'}, repeatable: true, key_text_size: 24}
+      - {click: '7', hint: '7', label: 'PQRS', swipe_down: '7', repeatable: true, key_text_size: 24}
+      - {click: '8', hint: '8', label: 'TUV', swipe_down: '8', repeatable: true, key_text_size: 24}
+      - {click: '9', hint: '9', label: 'WXYZ', swipe_down: '9', repeatable: true, key_text_size: 24}
       - {click: Alt_space, key_text_size: 24}
       #第四行
       - {click: Keyboard_t9_symbol, width: 12.5, key_text_offset_y: 0, long_click: Theme_settings, swipe_down: Color_switch, hint: '配色', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
