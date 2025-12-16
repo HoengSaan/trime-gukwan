@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: '3.1'
+config_version: '3.1.1'
 name: 小菊韵
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -1460,7 +1460,7 @@ preset_keys:
   Deploy: {label: 部署, command: broadcast, option: "com.osfans.trime.deploy"}
   Sync: {label: 同步, command: broadcast, option: "com.osfans.trime.sync"}
   #
-  Nothing: {label: '擺爛', send: ''}  #當還沒想好放什麼的時候就放這個吧
+  Nothing: {label: ' ', send: ''}  #當還沒想好放什麼的時候就放這個吧
   Keyboard_number: {label: '123', send: Eisu_toggle, select: number}
   Keyboard_basic_symbol: {label: '符號', send: Eisu_toggle, select: basic_symbol}
   #Extra_keyboard: {label: 'αбʃ', send: Eisu_toggle, select: Greek}
@@ -2035,7 +2035,7 @@ preset_keyboards:
       - {click: Alt_space, width: 40, key_text_size: 24}
       #第四行
       - {click: Keyboard_default, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color, key_text_size: 20}
-      - {click: '', label: '❌', long_click: Clear, hint: '長壓確認', key_symbol_color: on_key_text_color}
+      - {click: Nothing, label: '❌', long_click: Clear, hint: '長壓確認', key_symbol_color: on_key_text_color}
       - {click: undo, key_text_size: 20}
       - {click: redo, key_text_size: 20}
       - {click: Return, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
