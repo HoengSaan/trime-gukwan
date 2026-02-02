@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: '3.1.1'
+config_version: '3.2'
 name: 菊韻50
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -1554,6 +1554,8 @@ preset_keys:
   Liquid_fixed_left: {label: ' ← ', send: Left}
   Liquid_fixed_right: {label: ' → ', send: Right}
   Liquid_fixed_return: {label: '  ↲  ', repeatable: true, send: Return, functional: false}
+  Liquid_tabs: {label: 更多, sned: function, command: liquid_keyboard, option: ' 更多 '}
+  Liquid_clipboard: {label: 剪貼, sned: function, command: liquid_keyboard, option: '剪貼板'}
   # 
   Commit_Caret: {label: '^', commit: '^', functional: false}
   Commit_Hash: {label: '#', commit: '#', functional: false}
@@ -1605,10 +1607,10 @@ liquid_keyboard:
     keys:
       - Liquid_fixed_exit
       - Liquid_fixed_backspace
-      - Liquid_fixed_left
-      - Liquid_fixed_right
       - Liquid_fixed_space
       - Liquid_fixed_return
+      - Liquid_tabs
+      - Liquid_clipboard
   keyboards: 
     - draft
     - history
@@ -1626,6 +1628,7 @@ liquid_keyboard:
     - emoji_symbol
     - emoji_flag
     # 以下爲後加，用於輸入各類特殊符號
+    - tabs
     - punctuation
     - bracket
     - currency
@@ -1724,6 +1727,9 @@ liquid_keyboard:
     name: ' 🇺🇳 '
     type: SINGLE
     keys: ["🏁", "🚩", "🎌", "🏴", "🏳️", "🏳️‍🌈", "🏳️‍⚧️", "🏴‍☠️", "🇺🇳", "🇪🇺", "🇦🇶", "🇨🇳", "🇭🇰", "🇲🇴", "🇹🇼", "🇯🇵", "🇰🇷", "🇰🇵", "🇲🇳", "🇺🇸", "🇬🇧", "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "🏴󠁧󠁢󠁷󠁬󠁳󠁿", "🇷🇺", "🇮🇳", "🇧🇷", "🇿🇦", "🇨🇦", "🇦🇺", "🇳🇿", "🇩🇪", "🇫🇷", "🇮🇹", "🇪🇸", "🇸🇦", "🇹🇷", "🇮🇷", "🇮🇱", "🇵🇰", "🇮🇩", "🇵🇭", "🇹🇭", "🇻🇳", "🇲🇾", "🇸🇬", "🇲🇲", "🇰🇭", "🇱🇦", "🇧🇳", "🇹🇱", "🇵🇬", "🇦🇱", "🇦🇩", "🇦🇹", "🇧🇾", "🇧🇪", "🇧🇬", "🇭🇷", "🇨🇾", "🇨🇿", "🇩🇰", "🇪🇪", "🇫🇴", "🇫🇮", "🇬🇪", "🇬🇮", "🇬🇱", "🇬🇷", "🇭🇺", "🇮🇸", "🇮🇪", "🇱🇻", "🇱🇮", "🇱🇹", "🇱🇺", "🇲🇹", "🇲🇩", "🇲🇨", "🇲🇪", "🇳🇱", "🇲🇰", "🇳🇴", "🇵🇱", "🇵🇹", "🇷🇴", "🇷🇸", "🇸🇰", "🇸🇮", "🇸🇪", "🇨🇭", "🇺🇦", "🇻🇦", "🇦🇽", "🇬🇬", "🇯🇪", "🇮🇲", "🇸🇽", "🇧🇱", "🇵🇲", "🇻🇨", "🇮🇨", "🇽🇰", "🇸🇲", "🇦🇪", "🇧🇭", "🇮🇶", "🇯🇴", "🇰🇼", "🇱🇧", "🇴🇲", "🇵🇸", "🇶🇦", "🇸🇾", "🇾🇪", "🇦🇲", "🇦🇿", "🇹🇲", "🇧🇦", "🇦🇫", "🇧🇩", "🇧🇹", "🇱🇰", "🇲🇻", "🇳🇵", "🇮🇴", "🇰🇿", "🇰🇬", "🇹🇯", "🇺🇿", "🇦🇬", "🇦🇮", "🇦🇷", "🇧🇧", "🇧🇿", "🇧🇲", "🇧🇴", "🇨🇱", "🇨🇴", "🇨🇷", "🇨🇺", "🇩🇲", "🇩🇴", "🇪🇨", "🇸🇻", "🇫🇰", "🇬🇩", "🇬🇵", "🇬🇹", "🇬🇾", "🇭🇹", "🇭🇳", "🇯🇲", "🇲🇶", "🇲🇽", "🇳🇮", "🇵🇦", "🇵🇾", "🇵🇪", "🇵🇷", "🇧🇶", "🇰🇳", "🇱🇨", "🇻🇮", "🇸🇷", "🇹🇹", "🇹🇨", "🇺🇾", "🇻🇪", "🇻🇬", "🇦🇸", "🇨🇼", "🇫🇲", "🇲🇸", "🇵🇼", "🇦🇼", "🇧🇸", "🇲🇵", "🇬🇺", "🇫🇯", "🇸🇧", "🇻🇺", "🇼🇸", "🇰🇮", "🇳🇷", "🇳🇨", "🇵🇫", "🇬🇫", "🇹🇫", "🇳🇺", "🇨🇰", "🇹🇴", "🇹🇻", "🇼🇫", "🇵🇳", "🇬🇸", "🇳🇫", "🇹🇰", "🇨🇮", "🇩🇿", "🇦🇴", "🇧🇯", "🇧🇼", "🇧🇫", "🇧🇮", "🇨🇻", "🇨🇲", "🇨🇫", "🇹🇩", "🇰🇲", "🇨🇬", "🇨🇩", "🇩🇯", "🇪🇬", "🇬🇶", "🇪🇷", "🇸🇿", "🇪🇹", "🇬🇦", "🇬🇲", "🇬🇭", "🇬🇳", "🇬🇼", "🇰🇪", "🇱🇸", "🇱🇷", "🇱🇾", "🇲🇬", "🇲🇼", "🇲🇱", "🇲🇷", "🇲🇺", "🇾🇹", "🇲🇦", "🇲🇿", "🇳🇦", "🇳🇪", "🇳🇬", "🇷🇪", "🇷🇼", "🇸🇹", "🇸🇳", "🇸🇨", "🇸🇱", "🇸🇴", "🇿🇲", "🇿🇼", "🇸🇩", "🇸🇸", "🇹🇬", "🇹🇳", "🇺🇬", "🇪🇭", "🇹🇿", "🇧🇮", "🇲🇭", "🇸🇭", "🇨🇨", "🇰🇾", "🇨🇽", "🇩🇬", "🇦🇨"]
+  tabs:
+    name: " 更多 "
+    type: TABS
   punctuation:
     name: ' 句讀 '
     type: SINGLE
