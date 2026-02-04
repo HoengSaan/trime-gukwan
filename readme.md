@@ -18,7 +18,7 @@ This work is licensed under a
 ### 其他菊韻項目
 
 - 菊韻粵語：[rime-gukwan: 菊韻粵語輸入方案 基於中州韻 Cantonese IME (RIME Scheme)](https://github.com/HoengSaan/rime-gukwan)
-- 菊韻和語：[rime-kikwin: 菊韻日本語入力法 基於中州韻 Japanese IME (RIME Scheme)](https://github.com/HoengSaan/rime-kikwin)
+- 菊韻和語（停止維護）：[rime-kikwin: 菊韻日本語入力法 基於中州韻 Japanese IME (RIME Scheme)](https://github.com/HoengSaan/rime-kikwin)
 
 ## 介紹
 
@@ -32,7 +32,7 @@ This work is licensed under a
   - 「**菊韻-**（gukwan……）」本身佈局爲過度複雜，試圖將過多功能塞進主鍵盤佈局之中，部份人或不能接受使用。
   - 「**菊韵-**（gukwan_simple……）」主鍵盤同普通36鍵佈局區別不大，亦允許拼音提示出現在相應鍵位，方便雙拼・三拼學習者使用。（「韵」爲「韻」異字）
   - 「**菊韻五段-**（gukwan_godan……）」是爲探求在少於26鍵情況，有無更好佈局，在此基礎上，毋須如同9鍵，14鍵，18鍵需要對方案拼寫進行更改。此佈局參考Google Godan日文輸入法，有針對粵拼輸入作出優化。具體請見下方說明。
-  - 「**菊均-**（gukwan_mini……）」正常26鍵佈局（「均」爲「韻」古字，未製作）
+  - 「**菊均-**（gukwan_mini……）」正常26鍵佈局，建議使用低高度版本。（「均」爲「韻」古字）
 - 數字位置
   - 「普通（）」：常規36鍵佈局，數字鍵在頂。
   - 「置底（……dai）」：數字鍵在底。（未製作）
