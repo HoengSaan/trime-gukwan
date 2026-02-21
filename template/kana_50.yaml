@@ -74,7 +74,7 @@
       - {click: 'そ', swipe_left: 'ぞ', swipe_down: 'ぞ', swipe_right: 'そ゚', hint: 'ぞ   そ゚', key_text_size: 16, symbol_text_size: 6}
       - {click: 'こ', long_click: '𛄲', swipe_left: 'ご', swipe_down: 'ご', swipe_right: 'こ゚', hint: 'ご   こ゚', key_text_size: 16, symbol_text_size: 6}
       - {click: 'お', long_click: 'ぉ', key_text_size: 16, symbol_text_size: 6}
-      - {click: BackSpace, swipe_down: Delete, hint: '⇨', key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: BackSpace, swipe_down: Delete, hint: '▶︎', key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第六行
       - {click: Keyboard_Katakana, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: '、', width: 10}
@@ -168,7 +168,7 @@
       - {click: 'ソ', swipe_left: 'ゾ', swipe_down: 'ゾ', swipe_right: 'ソ゚', hint: 'ゾ   ソ゚', key_text_size: 16, symbol_text_size: 6}
       - {click: 'コ', long_click: '𛅕', swipe_left: 'ゴ', swipe_down: 'ゴ', swipe_right: 'コ゚', hint: 'ゴ   コ゚', key_text_size: 16, symbol_text_size: 6}
       - {click: 'オ', long_click: 'ォ', key_text_size: 16, symbol_text_size: 6}
-      - {click: BackSpace, swipe_down: Delete, hint: '⇨', key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: BackSpace, swipe_down: Delete, hint: '▶︎', key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第六行
       - {click: Keyboard_Hiragana, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: '、', width: 10}
