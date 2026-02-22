@@ -10,8 +10,8 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: '4.2'
-name: 小菊韵低
+config_version: '1.0f'
+name: 小菊韵底
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
 height:
@@ -42,29 +42,6 @@ style:
   candidate_use_cursor: true    #高亮候選項
   comment_on_top: true          #編碼提示在上方/右側
   horizontal: true              #水平模式
-  keyboards:                    #用到的鍵盤
-    - .default
-    - default
-    - number
-    - basic_symbol
-    - math_symbol
-    - Greek
-    - Greek_symbol
-    - Cyrillic
-    - Cyrillic_symbol
-    - IPA1
-    - IPA2
-    - IPA3
-    - IPA_symbol_1
-    - IPA_symbol_2
-    - editor
-    - hiragana
-    - katakana
-    - hangul
-    - t9
-    - t9_symbol
-    - English
-    - English_ASCII
   proximity_correction: true    #避免按到縫隙
   reset_ascii_mode: true        #自動轉回中文
   latin_locale: en_US           #這些
@@ -1557,20 +1534,27 @@ preset_keys:
   Liquid_tabs: {label: '  … ', sned: function, command: liquid_keyboard, option: ' 更多 '}
   Liquid_clipboard: {label: 📋, sned: function, command: liquid_keyboard, option: '剪貼板'}
   # 
-  Commit_Caret: {label: '^', commit: '^', functional: false}
-  Commit_Hash: {label: '#', commit: '#', functional: false}
-  Commit_At: {label: '@', commit: '@', functional: false}
-  Commit_Dollar: {label: '$', commit: '$', functional: false}
-  Commit_Percent: {label: '%', commit: '%', functional: false}
-  Commit_Ampersand: {label: '&', commit: '&', functional: false}
-  Commit_Plus: {label: '+', commit: '+', functional: false}
-  Commit_Minus: {label: '-', commit: '-', functional: false}
-  Commit_Asterisk: {label: '*', commit: '*', functional: false}
-  Commit_Slash: {label: '/', commit: '/', functional: false}
-  Commit_Equal: {label: '=', commit: '=', functional: false}
-  Commit_Dot: {label: '.', commit: '.', functional: false}
-  Commit_Brace_L: {label: '{', commit: '{', functional: false}
-  Commit_Brace_R: {label: '}', commit: '}', functional: false}
+  C_Caret: {label: '^', commit: '^', functional: false}
+  C_Hash: {label: '#', commit: '#', functional: false}
+  C_At: {label: '@', commit: '@', functional: false}
+  C_Dollar: {label: '$', commit: '$', functional: false}
+  C_Percent: {label: '%', commit: '%', functional: false}
+  C_Ampersand: {label: '&', commit: '&', functional: false}
+  C_Underscore: {label: '_)', commit: '_', functional: false}
+  C_Plus: {label: '+', commit: '+', functional: false}
+  C_Minus: {label: '-', commit: '-', functional: false}
+  C_Asterisk: {label: '*', commit: '*', functional: false}
+  C_Slash: {label: '/', commit: '/', functional: false}
+  C_Backslash: {label: '\', commit: '\', functional: false}
+  C_Equal: {label: '=', commit: '=', functional: false}
+  C_Dot: {label: '.', commit: '.', functional: false}
+  C_Brace_L: {label: '{', commit: '{', functional: false}
+  C_Brace_R: {label: '}', commit: '}', functional: false}
+  C_Bracket_L: {label: '[', commit: '[', functional: false}
+  C_Bracket_R: {label: ']', commit: ']', functional: false}
+  C_Parenthese_L: {label: '(', commit: '(', functional: false}
+  C_Parenthese_R: {label: ')', commit: ')', functional: false}
+  Ikaryaku: {label: '(ry', commit: '(ry', functional: false}
   Number_Lua: {label: '三〥柒', text: 'S', functional: false}
   Calc_Lua: {label: 計數機, text: 'cC', functional: false}
   Date_Lua: {label: '年月日', text: 'N', functional: false}
@@ -1968,7 +1952,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_left: '-', swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
@@ -1983,25 +1967,25 @@ preset_keyboards:
     height: 47
     keys:
       #第一行
-      - {click: Commit_Hash, long_click: Commit_At, swipe_up: Commit_At, swipe_left: '¢', swipe_right: '€' , hint: '¢   €'}
-      - {click: '¥', long_click: Commit_Dollar, swipe_up: Commit_Dollar, swipe_left: '£', swipe_right: '₩', hint: '£   ₩'}
-      - {click: Commit_Percent, long_click: Commit_Ampersand, swipe_up: Commit_Ampersand, swipe_left: '‰', swipe_right: '‱', hint: '‰   ‱'}
+      - {click: C_Hash, long_click: C_At, swipe_up: C_At, swipe_left: '¢', swipe_right: '€' , hint: '¢   €'}
+      - {click: '¥', long_click: C_Dollar, swipe_up: C_Dollar, swipe_left: '£', swipe_right: '₩', hint: '£   ₩'}
+      - {click: C_Percent, long_click: C_Ampersand, swipe_up: C_Ampersand, swipe_left: '‰', swipe_right: '‱', hint: '‰   ‱'}
       - {click: '1', width: 18, repeatable: true, key_text_size: 24}
       - {click: '2', width: 18, repeatable: true, key_text_size: 24}
       - {click: '3', width: 18, repeatable: true, key_text_size: 24}
       - {click: BackSpace, swipe_down: Delete, hint: '▶︎', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第二行
-      - {click: Commit_Plus}
-      - {click: Commit_Minus}
+      - {click: C_Plus}
+      - {click: C_Minus}
       - {click: Left, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color, key_text_size: 24}
       - {click: '4', width: 18, repeatable: true, key_text_size: 24}
       - {click: '5', width: 18, repeatable: true, key_text_color: on_key_text_color, key_text_size: 24}
       - {click: '6', width: 18, repeatable: true, key_text_size: 24}
       - {click: Right, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color, key_text_size: 24}
       #第四行
-      - {click: Commit_Asterisk, long_click: '×', swipe_up: '×'}
-      - {click: Commit_Slash, long_click: '÷', swipe_up: '÷'}
-      - {click: Commit_Equal, long_click: '≠', swipe_up: '≠', swipe_left: '≈', swipe_right: '≒', hint: '≈   ≒'}
+      - {click: C_Asterisk, long_click: '×', swipe_up: '×'}
+      - {click: C_Slash, long_click: '÷', swipe_up: '÷'}
+      - {click: C_Equal, long_click: '≠', swipe_up: '≠', swipe_left: '≈', swipe_right: '≒', hint: '≈   ≒'}
       - {click: '7', width: 18, repeatable: true, key_text_size: 24}
       - {click: '8', width: 18, repeatable: true, key_text_size: 24}
       - {click: '9', width: 18, repeatable: true, key_text_size: 24}
@@ -2010,7 +1994,7 @@ preset_keyboards:
       - {click: Keyboard_default, width: 17.25, long_click: Number_Lua, swipe_down: Date_Lua, hint: '年月日', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: Keyboard_math_symbol, width: 17.25, long_click: Calc_Lua, swipe_down: Unicode_Lua, hint: 'Unicode', key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: '0', width: 36, repeatable: true, hint: '欲使腳本須方案本身支持', key_symbol_color: on_key_text_color, key_text_size: 24}
-      - {click: Commit_Dot, width: 18, repeatable: true, key_text_size: 24}
+      - {click: C_Dot, width: 18, repeatable: true, key_text_size: 24}
       - {click: Return, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
 
   editor:
@@ -2063,7 +2047,7 @@ preset_keyboards:
       - {click: '№', swipe_left: '₹', swipe_right: '₱', hint: '₹   ₱'}
       - {click: '♪'}
       - {click: '¶', long_click: '§'}
-      - {click: '°', long_click: '', swipe_left: '′', swipe_right: '″', hint: '′   ″'}
+      - {click: '°', swipe_left: '′', swipe_right: '″', hint: '′   ″'}
       - {click: '∅', long_click: 'ⁿ'}
       - {click: '±', long_click: '∓'}
       - {click: '≠', long_click: '∞', swipe_left: '≡', swipe_right: '≈', hint: '≡   ≈'}
@@ -2979,7 +2963,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_left: '-', swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
@@ -3124,7 +3108,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_left: '-', swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
@@ -3186,7 +3170,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_left: '-', swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
@@ -3248,7 +3232,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_left: '-', swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
@@ -3310,7 +3294,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_left: '-', swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
@@ -3381,7 +3365,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_left: '-', swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
@@ -3403,15 +3387,15 @@ preset_keyboards:
       - {click: '3', label: 'ˇ', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', label: 'ˋ', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', label: 'ㄓ', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', label: 'ˊ', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
-      - {click: '7', label: '˙', long_click: '&', swipe_up: '&', swipe_left: {commit: '-'}, swipe_right: '_', hint: '-   _'}
+      - {click: '6', label: 'ˊ', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
+      - {click: '7', label: '˙', long_click: '&', swipe_up: '&', swipe_left: C_Minus, swipe_right: '_', hint: '-   _'}
       - {click: '8', label: 'ㄚ', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', label: 'ㄞ', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
       - {click: '0', label: 'ㄢ', long_click: ')', swipe_up: ')', swipe_down: '|', hint: '|'}
       #第二行
       - {click: 'q', label: 'ㄆ', long_click: '`', swipe_up: '`'}
       - {click: 'w', label: 'ㄊ', long_click: ':', swipe_up: ':'}
-      - {click: 'e', label: 'ㄍ', long_click: {commit: ';'}, swipe_up: ';'}
+      - {click: 'e', label: 'ㄍ', long_click: ';', swipe_up: ';'}
       - {click: 'r', label: 'ㄐ', long_click: "'", swipe_up: "'"}
       - {click: 't', label: 'ㄔ', long_click: '"', swipe_up: '"'}
       - {click: 'y', label: 'ㄗ', long_click: redo}
@@ -3466,15 +3450,15 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
-      - {click: '7', long_click: '&', swipe_up: '&', swipe_left: {commit: '-'}, swipe_right: '_', hint: '-   _'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
+      - {click: '7', long_click: '&', swipe_up: '&', swipe_left: C_Minus, swipe_right: '_', hint: '-   _'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_left: '+', swipe_right: '=', hint: '+   ='}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_left: '/', swipe_right: '\', hint: '/   \'}
       - {click: '0', long_click: ')', swipe_up: ')', swipe_down: '|', hint: '|'}
       #第二行
       - {click: 'q', long_click: '`', swipe_up: '`'}
       - {click: 'w', long_click: ':', swipe_up: ':'}
-      - {click: 'e', long_click: {commit: ';'}, swipe_up: ';'}
+      - {click: 'e', long_click: ';', swipe_up: ';'}
       - {click: 'r', long_click: "'", swipe_up: "'"}
       - {click: 't', long_click: '"', swipe_up: '"'}
       - {click: 'y', long_click: redo}
@@ -3571,9 +3555,9 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&', swipe_down: '_', hint: '_'}
-      - {click: '8', long_click: '*', swipe_up: '*', swipe_down: {commit: '-'}, hint: '-'}
+      - {click: '8', long_click: '*', swipe_up: '*', swipe_down: C_Minus, hint: '-'}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_down: '+', hint: '+'}
       - {click: '0', long_click: ')', swipe_up: ')', swipe_down: '/', hint: '/'}
       #第二行
@@ -3628,10 +3612,10 @@ preset_keyboards:
       - {click: 'p', long_click: '|', swipe_up: '|', swipe_down: '\', hint: '\'}
       #第三行
       - {width: 5}
-      - {click: 'a', long_click: 'select_all', swipe_left: {commit: '/'}, swipe_right: {commit: '\'}, hint: '/   \'}
-      - {click: 's', long_click: Keyboard_Greek, swipe_left: Commit_Brace_L, swipe_right: Commit_Brace_R, hint: '{   }'}
-      - {click: 'd', long_click: Keyboard_Cyrillic, swipe_left: {commit: '['}, swipe_right: {commit: ']'}, hint: '[   ]'}
-      - {click: 'f', long_click: Keyboard_IPA, swipe_left: {commit: '('}, swipe_right: {commit: ')'}, hint: '(   )', key_text_color: on_key_text_color}
+      - {click: 'a', long_click: 'select_all', swipe_left: C_Slash, swipe_right: C_Backslash, hint: '/   \'}
+      - {click: 's', long_click: Keyboard_Greek, swipe_left: C_Brace_L, swipe_right: C_Brace_R, hint: '{   }'}
+      - {click: 'd', long_click: Keyboard_Cyrillic, swipe_left: C_Bracket_L, swipe_right: C_Bracket_R, hint: '[   ]'}
+      - {click: 'f', long_click: Keyboard_IPA, swipe_left: C_Parenthese_L, swipe_right: C_Parenthese_R, hint: '(   )', key_text_color: on_key_text_color}
       - {click: 'g', long_click: Keyboard_editor, swipe_left: '〈', swipe_right: '〉', hint: '〈   〉'}
       - {click: 'h', long_click: Keyboard_number, swipe_left: '《', swipe_right: '》', hint: '《   》'}
       - {click: 'j', long_click: Keyboard_Hiragana, swipe_left: '「', swipe_right: '」',  hint: '「   」', key_text_color: on_key_text_color}
@@ -3661,7 +3645,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_down: '-', hint: '-'}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_down: '+', hint: '+'}
@@ -3690,10 +3674,10 @@ preset_keyboards:
       - {click: 'p', long_click: '|', swipe_up: '|', swipe_down: '\', hint: '\'}
       #第三行
       - {width: 5}
-      - {click: 'a', long_click: 'select_all', swipe_left: {commit: '/'}, swipe_right: {commit: '\'}, hint: '/   \'}
-      - {click: 's', long_click: Keyboard_Greek, swipe_left: Commit_Brace_L, swipe_right: Commit_Brace_R, hint: '{   }'}
-      - {click: 'd', long_click: Keyboard_Cyrillic, swipe_left: {commit: '['}, swipe_right: {commit: ']'}, hint: '[   ]'}
-      - {click: 'f', long_click: Keyboard_IPA, swipe_left: {commit: '('}, swipe_right: {commit: ')'}, hint: '(   )', key_text_color: on_key_text_color}
+      - {click: 'a', long_click: 'select_all', swipe_left: C_Slash, swipe_right: C_Backslash, hint: '/   \'}
+      - {click: 's', long_click: Keyboard_Greek, swipe_left: C_Brace_L, swipe_right: C_Brace_R, hint: '{   }'}
+      - {click: 'd', long_click: Keyboard_Cyrillic, swipe_left: C_Bracket_L, swipe_right: C_Bracket_R, hint: '[   ]'}
+      - {click: 'f', long_click: Keyboard_IPA, swipe_left: C_Parenthese_L, swipe_right: C_Parenthese_R, hint: '(   )', key_text_color: on_key_text_color}
       - {click: 'g', long_click: Keyboard_editor, swipe_left: '〈', swipe_right: '〉', hint: '〈   〉'}
       - {click: 'h', long_click: Keyboard_number, swipe_left: '《', swipe_right: '》', hint: '《   》'}
       - {click: 'j', long_click: Keyboard_Hiragana, swipe_left: '「', swipe_right: '」',  hint: '「   」', key_text_color: on_key_text_color}
@@ -3723,7 +3707,7 @@ preset_keyboards:
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
       - {click: '5', long_click: '%', swipe_up: '%', swipe_left: '£', swipe_right: '₿', hint: '£   ₿'}
-      - {click: '6', long_click: Commit_Caret, swipe_up: Commit_Caret, swipe_down: '……', swipe_left: '…', swipe_right: {commit: '(ry'}, hint: '……'}
+      - {click: '6', long_click: C_Caret, swipe_up: C_Caret, swipe_down: '……', swipe_left: '…', swipe_right: Ikaryaku, hint: '……'}
       - {click: '7', long_click: '&', swipe_up: '&'}
       - {click: '8', long_click: '*', swipe_up: '*', swipe_down: '-', hint: '-'}
       - {click: '9', long_click: '(', swipe_up: '(', swipe_down: '+', hint: '+'}
