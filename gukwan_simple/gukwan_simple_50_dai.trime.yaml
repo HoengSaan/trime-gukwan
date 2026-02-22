@@ -10,20 +10,19 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: '1.0f'
+config_version: 'v2.0'
 name: 菊韵50底
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
 height:
-  - &36_key_height 42
-  - &symbol_key_height 36
-  - &sub_key_height 28
+  - &36_key_height 68
+  - &sub_key_height 15
   - &hor_gap 4
   - &36_key_vert_gap 6
-  - &ipa_key_height 36
+  - &ipa_key_height 46
   - &ipa_key_width 8.33333333333333
   - &ipa_2_key_width 16.666666666666666
-  - &26_key_height 44
+  - &26_key_height 52
   - &26_key_vert_gap 9
   - &ipa_key_vert_gap 2
 
@@ -62,9 +61,9 @@ style:
   label_text_size: 20             #候選序號字號
   candidate_padding: 8            #候選項內邊距
   candidate_spacing: 1            #候選項間隔
-  candidate_text_size: 20         #候選項字號
+  candidate_text_size: 18         #候選項字號
   candidate_view_height: 26       #候選區高度
-  comment_text_size: 10           #候選項註釋字號
+  comment_text_size: 9           #候選項註釋字號
   comment_height: 14              #註釋區高度
   key_height: *36_key_height      #默認鍵高
   key_width: 10                   #默認鍵寬（佔屏寬百分比）
@@ -1362,7 +1361,7 @@ preset_keys:
   Return: {label: enter_labels, repeatable: true, send: Return, functional: false}
   Hide: {label: 隱藏, send: BACK}
   BackSpace: {label: '◀︎', repeatable: true, send: BackSpace}
-  space: {label: ' ', hint: '{schema}', repeatable: true, functional: false, send: space}
+  space: {label: '', preview: ' ', repeatable: true, functional: false, send: space}
   Escape: {label: Esc, send: Escape}
   Home: {label: '⬆️', send: Home}
   Insert: {label: Insert, send: Insert}
@@ -1405,7 +1404,7 @@ preset_keys:
   Keyboard_letter: {label: 字母, send: Eisu_toggle, select: default}
   Keyboard_default: {label: '回', send: Eisu_toggle, select: .default}
   Keyboard_switch: {label: 鍵盤, send: Eisu_toggle, select: .next}
-  Schema_switch: {label: 🌐︎, send: Control+Shift+1}
+  Schema_switch: {label: ⌘, send: Control+Shift+1}
   Color_switch: {label: 配色, send: PROG_RED}
   Help: {label: 說明, send: Help}
   Info: {label: 關於, send: INFO}
@@ -1520,10 +1519,10 @@ preset_keys:
   IPA_tie_bar_above: {label: '◌͡◌', text: '͡', functional: false}
   IPA_tie_bar_below: {label: '◌͜◌', text: '͜', functional: false}
   # Liquid Keyboard
-  Keyboard_clipboard: {label: 📋, send: function, command: liquid_keyboard, option: "剪貼板"}
-  Keyboard_emoji: {label: 繪文字, send: function, command: liquid_keyboard, option: ' 😀 '}
-  Keyboard_kaomoji: {label: 顏文字, send: function, command: liquid_keyboard, option: '顏文字'}
-  Keyboard_symbol: {label: 符號表, send: function, command: liquid_keyboard, option: ' 貨幣 '}
+  Keyboard_clipboard: {label: ⏍, send: function, command: clipboard_window}
+  Keyboard_emoji: {label: 繪, send: function, command: liquid_keyboard, option: ' 😀 '}
+  Keyboard_kaomoji: {label: 顏, send: function, command: liquid_keyboard, option: '顏文字'}
+  Keyboard_symbol: {label: 符, send: function, command: liquid_keyboard, option: ' 貨幣 '}
   Keyboard_greek_font: {label: 字型, sned: function, command: liquid_keyboard, option: '希臘字'}
   Liquid_fixed_exit: {label: '  回 ', send: function, command: liquid_keyboard, option: "-1"}
   Liquid_fixed_backspace: {label: ' ◀︎ ', repeatable: true, send: BackSpace}
@@ -1531,8 +1530,9 @@ preset_keys:
   Liquid_fixed_left: {label: ' ← ', send: Left}
   Liquid_fixed_right: {label: ' → ', send: Right}
   Liquid_fixed_return: {label: ' ⏎ ', repeatable: true, send: Return, functional: false}
-  Liquid_tabs: {label: '  … ', sned: function, command: liquid_keyboard, option: ' 更多 '}
-  Liquid_clipboard: {label: 📋, sned: function, command: liquid_keyboard, option: '剪貼板'}
+  Liquid_tabs: {label: '  …  ', sned: function, command: liquid_keyboard, option: ' 更多 '}
+  clipboard_window: {label: 📋, sned: function, command: clipboard_window}
+  menu_keyboard: {label: 菜單, sned: function, command: menu_keyboard}
   # 
   C_Caret: {label: '^', commit: '^', functional: false}
   C_Hash: {label: '#', commit: '#', functional: false}
@@ -1577,6 +1577,40 @@ preset_keys:
   Stroke1_rl: {label: 筆劃, text: 'x', functional: false}
   Cangjie1_rl: {label: 倉頡, text: 'v', functional: false}
 
+preedit:
+  foreground:
+    font_size: 16
+  horizontal_padding: 8
+  top_end_radius: 4
+tool_bar:
+  button_font: iconfont.ttf
+  button_spacing: 5
+  buttons:
+    - {action: Hide, foreground: {fg_normal: candidate_text_color, style: "ic@keyboard_close"}}
+    #- {action: liquid_keyboard_emoji, foreground: {style: "ic@emoticon"}}
+    - {action: VOICE_ASSIST, foreground: {style: "ic@microphone"}}
+    #- {action: clipboard_window, foreground: {style: "ic@clipboard"}}
+    #- {action: Keyboard_editor, foreground: {style: "ic@cursor_text"}}
+    - {action: Punct_switch, foreground: {font_size: 18, option_styles: ["ic@comma-circle", "ic@comma"]}}
+    - {action: Mode_switch, foreground: {font_size: 20, option_styles: ["ic@ideogram-cjk", "ic@alphabetical-variant"]}}
+    - {action: Zenkaku_Hankaku, foreground: {option_styles: ["ic@circle", "ic@circle-half-full"]}}
+    - {action: Right, foreground: {style: "ic@arrow-right-bold"}}
+    - {action: Left, foreground: {style: "ic@arrow-left-bold"}}
+  primary_button:
+    action: menu_keyboard
+    background: {bg_highlight: hilited_candidate_button_color, bg_normal: 0x00, corner_radius: 10, horizontal_inset: 0, type: circle, vertical_inset: 4}
+    foreground: {fg_normal: candidate_text_color, padding: 10, style: "ic@dots_horizontal"}
+window:
+  foreground:
+    comment_font_size: 16
+    label_font_size: 20
+    text_font_size: 20
+  insets:
+    horizontal: 4
+    vertical: 4
+  item_padding:
+    horizontal: 4
+
 liquid_keyboard:
   author: 'Windy_D, Hoengsaan (Lingdai)'
   row: 6              #豎屏每屏最多按鍵行數
@@ -1594,11 +1628,10 @@ liquid_keyboard:
       - Liquid_fixed_space
       - Liquid_fixed_return
       - Liquid_tabs
-      - Liquid_clipboard
+      - clipboard_window
   keyboards: 
     - draft
     - history
-    - clipboard
     # 繪文字
     - emoji_face
     - emoji_body
@@ -1658,12 +1691,6 @@ liquid_keyboard:
     - kaomoji_hung
     - kaomoji_jau
     - kaomoji_sau
-  draft:
-    type: DRAFT
-    name: 草稿
-  clipboard:
-    name: 剪貼板
-    type: CLIPBOARD
   history:
     name: 常用
     type: HISTORY
@@ -1926,7 +1953,7 @@ preset_keyboards:
       - {click: 'g', long_click: Keyboard_editor}
       - {click: 'h', long_click: Keyboard_number}
       - {click: 'j', long_click: Keyboard_Hiragana, key_text_color: on_key_text_color}
-      - {click: 'k', long_click: Keyboard_kaomoji}
+      - {click: 'k', long_click: Keyboard_emoji}
       - {click: 'l', long_click: Keyboard_Hangul}
       - {width: 5}
       #第四行
@@ -3043,7 +3070,7 @@ preset_keyboards:
       - {click: 'g', long_click: Keyboard_editor}
       - {click: 'h', long_click: Keyboard_number}
       - {click: 'j', long_click: Keyboard_Hiragana, key_text_color: on_key_text_color, hint: 'y'}
-      - {click: 'k', long_click: Keyboard_kaomoji}
+      - {click: 'k', long_click: Keyboard_emoji}
       - {click: 'l', long_click: Keyboard_Hangul}
       - {width: 5}
       #第四行
