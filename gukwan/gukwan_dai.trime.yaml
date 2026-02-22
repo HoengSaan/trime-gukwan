@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: 'v2.0'
+config_version: 'v2.1'
 name: 菊韻底
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -1394,7 +1394,7 @@ preset_keys:
   # rime狀態
   Mode_switch: {toggle: ascii_mode, send: Mode_switch, states: [ 中文, 西文 ]}
   Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: [ 半角, 全角 ]}
-  Henkan: {toggle: simplification, send: Mode_switch, states: [ 漢字, 漢字 ]}
+  Henkan: {toggle: simplification, send: Mode_switch, states: [ 漢字, 汉字 ]}
   Charset_switch: {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增廣 ]}
   Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: [ 。，, ．， ]}
   # trime設定
@@ -1586,16 +1586,17 @@ tool_bar:
   button_font: iconfont.ttf
   button_spacing: 5
   buttons:
-    - {action: Hide, foreground: {fg_normal: candidate_text_color, style: "ic@keyboard_close"}}
+    #- {action: Hide, foreground: {fg_normal: candidate_text_color, style: "ic@keyboard_close"}}
     #- {action: liquid_keyboard_emoji, foreground: {style: "ic@emoticon"}}
     - {action: VOICE_ASSIST, foreground: {style: "ic@microphone"}}
-    #- {action: clipboard_window, foreground: {style: "ic@clipboard"}}
-    #- {action: Keyboard_editor, foreground: {style: "ic@cursor_text"}}
-    - {action: Punct_switch, foreground: {font_size: 18, option_styles: ["ic@comma-circle", "ic@comma"]}}
-    - {action: Mode_switch, foreground: {font_size: 20, option_styles: ["ic@ideogram-cjk", "ic@alphabetical-variant"]}}
-    - {action: Zenkaku_Hankaku, foreground: {option_styles: ["ic@circle", "ic@circle-half-full"]}}
     - {action: Right, foreground: {style: "ic@arrow-right-bold"}}
     - {action: Left, foreground: {style: "ic@arrow-left-bold"}}
+    #- {action: clipboard_window, foreground: {style: "ic@clipboard"}}
+    #- {action: Keyboard_editor, foreground: {style: "ic@cursor_text"}}
+    - {action: Henkan, foreground: {option_styles: ["ic@translate-off", "ic@translate"]}}
+    - {action: Punct_switch, foreground: {option_styles: ["ic@comma-circle", "ic@comma"]}}
+    - {action: Zenkaku_Hankaku, foreground: {option_styles: ["ic@circle", "ic@circle-half-full"]}}
+    - {action: Mode_switch, foreground: {font_size: 20, option_styles: ["ic@ideogram-cjk-variant", "ic@alphabetical-variant"]}}
   primary_button:
     action: menu_keyboard
     background: {bg_highlight: hilited_candidate_button_color, bg_normal: 0x00, corner_radius: 10, horizontal_inset: 0, type: circle, vertical_inset: 4}
@@ -1974,7 +1975,7 @@ preset_keyboards:
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '・', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -2985,7 +2986,7 @@ preset_keyboards:
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '･', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3130,7 +3131,7 @@ preset_keyboards:
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '・', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3192,7 +3193,7 @@ preset_keyboards:
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '・', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3263,7 +3264,7 @@ preset_keyboards:
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '・', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3285,7 +3286,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', label: 'ㄅ', long_click: '!', swipe_up: '!'}
+      - {click: '1', label: 'ㄅ', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', label: 'ㄉ', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', label: 'ˇ', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', label: 'ˋ', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3348,7 +3349,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3453,7 +3454,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3543,7 +3544,7 @@ preset_keyboards:
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '・', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3605,7 +3606,7 @@ preset_keyboards:
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '・', key_text_color: one_color}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
