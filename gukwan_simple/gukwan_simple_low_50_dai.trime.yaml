@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: 'v2.1'
+config_version: 'v2.2'
 name: 小菊韵50底
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -1445,10 +1445,10 @@ preset_keys:
   Keyboard_Greek_symbol: {label: '符', send: Eisu_toggle, select: Greek_symbol}
   Keyboard_Cyrillic: {label: 'абг', send: Eisu_toggle, select: Cyrillic}
   Keyboard_Cyrillic_symbol: {label: '符', send: Eisu_toggle, select: Cyrillic_symbol}
-  Keyboard_IPA: {label: 'ɑɔə', send: Eisu_toggle, select: IPA1}
+  Keyboard_IPA: {label: 'IPA', send: Eisu_toggle, select: IPA1}
   Keyboard_Greek_Selected: {label: 'αβγ', send: '', functional: false}
   Keyboard_Cyrillic_Selected: {label: 'абг', send: '', functional: false}
-  Keyboard_IPA_Selected: {label: 'ɑɔə', send: '', functional: false}
+  Keyboard_IPA_Selected: {label: 'IPA', send: '', functional: false}
   Keyboard_IPA1: {label: '3/3', send: Eisu_toggle, select: IPA1}
   Keyboard_IPA2: {label: '1/3', send: Eisu_toggle, select: IPA2}
   Keyboard_IPA3: {label: '2/3', send: Eisu_toggle, select: IPA3}
@@ -1524,14 +1524,14 @@ preset_keys:
   Keyboard_kaomoji: {label: 顏, send: function, command: liquid_keyboard, option: '顏文字'}
   Keyboard_symbol: {label: 符, send: function, command: liquid_keyboard, option: ' 貨幣 '}
   Keyboard_greek_font: {label: 字型, sned: function, command: liquid_keyboard, option: '希臘字'}
-  Liquid_fixed_exit: {label: '  回 ', send: function, command: liquid_keyboard, option: "-1"}
-  Liquid_fixed_backspace: {label: ' ◀︎ ', repeatable: true, send: BackSpace}
-  Liquid_fixed_space: {label: '  ⎵ ', repeatable: true, functional: false, send: space}
+  Liquid_fixed_exit: {label: '   回   ', send: function, command: liquid_keyboard, option: "-1"}
+  Liquid_fixed_backspace: {label: '  ◀︎  ', repeatable: true, send: BackSpace}
+  Liquid_fixed_space: {label: '   ⎵   ', repeatable: true, functional: false, send: space}
   Liquid_fixed_left: {label: ' ← ', send: Left}
   Liquid_fixed_right: {label: ' → ', send: Right}
-  Liquid_fixed_return: {label: ' ⏎ ', repeatable: true, send: Return, functional: false}
-  Liquid_tabs: {label: '  …  ', sned: function, command: liquid_keyboard, option: ' 更多 '}
-  clipboard_window: {label: 📋, sned: function, command: clipboard_window}
+  Liquid_fixed_return: {label: '  ⏎  ', repeatable: true, send: Return, functional: false}
+  Liquid_tabs: {label: '  ……  ', sned: function, command: liquid_keyboard, option: ' 更多 '}
+  clipboard_window: {label: '   ⏍   ', sned: function, command: clipboard_window}
   menu_keyboard: {label: 菜單, sned: function, command: menu_keyboard}
   # 
   C_Caret: {label: '^', commit: '^', functional: false}
@@ -1582,25 +1582,23 @@ preedit:
     font_size: 16
   horizontal_padding: 8
   top_end_radius: 4
+
 tool_bar:
   button_font: iconfont.ttf
-  button_spacing: 5
+  button_spacing: 4
   buttons:
-    #- {action: Hide, foreground: {fg_normal: candidate_text_color, style: "ic@keyboard_close"}}
-    #- {action: liquid_keyboard_emoji, foreground: {style: "ic@emoticon"}}
     - {action: VOICE_ASSIST, foreground: {style: "ic@microphone"}}
     - {action: Right, foreground: {style: "ic@arrow-right-bold"}}
     - {action: Left, foreground: {style: "ic@arrow-left-bold"}}
-    #- {action: clipboard_window, foreground: {style: "ic@clipboard"}}
-    #- {action: Keyboard_editor, foreground: {style: "ic@cursor_text"}}
     - {action: Henkan, foreground: {option_styles: ["ic@translate-off", "ic@translate"]}}
-    - {action: Punct_switch, foreground: {option_styles: ["ic@comma-circle", "ic@comma"]}}
-    - {action: Zenkaku_Hankaku, foreground: {option_styles: ["ic@circle", "ic@circle-half-full"]}}
+    - {action: Punct_switch, foreground: {option_styles: ["ic@comma-circle", "ic@comma-circle-outline"]}}
+    - {action: Zenkaku_Hankaku, foreground: {option_styles: ["ic@circle", "ic@circle-outline"]}}
     - {action: Mode_switch, foreground: {font_size: 20, option_styles: ["ic@ideogram-cjk-variant", "ic@alphabetical-variant"]}}
   primary_button:
     action: menu_keyboard
     background: {bg_highlight: hilited_candidate_button_color, bg_normal: 0x00, corner_radius: 10, horizontal_inset: 0, type: circle, vertical_inset: 4}
     foreground: {fg_normal: candidate_text_color, padding: 10, style: "ic@dots_horizontal"}
+
 window:
   foreground:
     comment_font_size: 16
@@ -1682,16 +1680,16 @@ liquid_keyboard:
     - technical
     - mathematics
     # 顏文字
-    - kaomoji_lai
-    - kaomoji_hi
-    - kaomoji_nu
-    - kaomoji_oi
-    - kaomoji_lok
-    - kaomoji_classic
-    - kaomoji_ging
-    - kaomoji_hung
-    - kaomoji_jau
-    - kaomoji_sau
+    - kao_lai
+    - kao_hi
+    - kao_nu
+    - kao_oi
+    - kao_lok
+    - kao_classic
+    - kao_ging
+    - kao_hung
+    - kao_jau
+    - kao_sau
   history:
     name: 常用
     type: HISTORY
@@ -1881,45 +1879,45 @@ liquid_keyboard:
     name: ' 數學 '
     type: SINGLE
     keys: "+−-×÷±∓∔=¬∩∪∝∞ℵℶℷℸℏℇ∀∁∂℮∃∄∅∆∇⊂⊃⊄⊅⊆⊇⊈⊉⊊⊋∈∉∊∋∌∍∧∨<>≤≥≦≧≨≩≪≫≭≮≯≰≱≲≳≴≶≷≸≹≺≻≼≽≾≿⊀⊁∎∏∐∑⨊⨋∕∖∗∘∙√∛∜∟∠∡∢∣∤∥∦∫∬∭∮∯∰∱∲∳⨌⨍⨎⨏⨐⨑⨒⨓⨔⨕⨖⨗⨘⨙⨚⨛⨜⌠⎮⌡∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊≋≌≍≎≏≐≑≒≓≔≕≖≗≘≙≚≛≜≝≞≟≠≡≢≣≬⊌⊍⊎⊏⊐⊑⊒⊓⊔&⅋⊕⊖⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡⊢⊣⊤⊥⊦⊧⊨⊩⊪⊫⊬⊭⊮⊯⊰⊱⊲⊳⊴⊵⊶⊷⊸⊹⊺⊻⊼⊽⊾⊿⋀⋁⋂⋃⋄⋅⋆⋇⋈⋉⋊⋋⋌⋍⋎⋏⋐⋑⋒⋓⋔⋕⋖⋗⋘⋙⋚⋛⋜⋝⋞⋟⋠⋡⋢⋣⋤⋥⋦⋧⋨⋩⋪⋫⋬⋭⋮⋯⋰⋱⋲⋳⋴⋵⋶⋷⋸⋹⋺⋻⋼⋽⋾⋿⨀⨁⨂⨃⨄⨅⨆⨇⨈⨉⨠⨡⨢⨣⨤⨥⨦⨧⨨⨩⨪⨫⨬⨭⨮⨯⨰⨱⨲⨳⨴⨵⨶⨷⨸⨹⨺⨻⨼⨽⨾⨿⩀⩁⩂⩃⩄⩅⩆⩇⩈⩉⩊⩋⩌⩍⩎⩏⩐⩑⩒⩓⩔⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟⩠⩡⩢⩣⩤⩥⩦⩧⩨⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎⪏⪐⪑⪒⪓⪔⪕⪖⪗⪘⪙⪚⪛⪜⪝⪞⪟⪠⪡⪣⪤⪥⪦⪧⪨⪩⪪⪫⪬⪭⪮⪯⪰⪱⪲⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽⪾⪿⫀⫁⫂⫃⫄⫅⫆⫇⫈⫉⫊⫋⫌⫍⫎⫏⫐⫑⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛⫝̸⫝⫞⫟⫠⫡⫢⫣⫤⫥⫦⫧⫨⫩⫪⫫⫬⫭⫮⫯⫰⫱⫲⫳⫴⫵⫶⫷⫸⫹⫺⫻⫼⫽⫾⫿⟐⟑⟒⟓⟔⟕⟖⟗⟘⟙⟚⟛⟜⟝⟞⟟⟠⟡⟢⟣⟤⟥⟦⟧⟨⟩⟪⟫⦀⦁⦂⦃⦄⦅⦆⦇⦈⦉⦊⦋⦌⦍⦎⦏⦐⦑⦒⦓⦔⦕⦖⦗⦘⦙⦚⧘⧙⧚⧛⦛⦜⦝⦞⦟⦠⦡⦢⦣⦤⦥⦦⦧⦨⦩⦪⦫⦬⦭⦮⦯⦰⦱⦲⦳⦴⦵⦶⦷⦸⦹⦺⦻⦼⦽⦾⦿⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉⧊⧋⧌⧍⧎⧏⧐⧑⧒⧓⧔⧕⧖⧗⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯⧰⧱⧲⧳⧴⧵⧶⧷⧸⧹⧺⧻⧼⧽⧾⧿⁺⁻⁼⁽⁾ⁿ₊₋₌₍₎"
-  kaomoji_lai:
+  kao_lai:
     name: " (禮) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["(ノﾟДﾟ)", "(ｏ'∀')ﾉ", "( *'3`)ﾉ", "(* 'ー')ﾉ", "(o'ω')ﾉ", "(* 'ω')ﾉ", "(ｏ'ー'ｏ)ﾉ", "(○ 'ー')ノ", "(*ﾟｪﾟ)ﾉ", "(=ﾟωﾟ)ﾉ", "( ﾟ∀ﾟ)ﾉ", "( ﾟдﾟ)ﾉ", "( ﾟДﾟ)ﾉ", "(ノﾟｪﾟ)", "(●ﾟェﾟ)ノ", "(｡ゝ∀・)ﾉ", "(｡-∀-)ﾉ", "(｡・∀・)ﾉ", "( ｀・∀・)ﾉ", "( ´・ω・)ﾉ", "(´・∀・)ﾉ", "( ´ー｀)ﾉ", "(*´ｪ｀)ﾉ", "(*´ー｀)ﾉ", "( ´Д｀)ﾉ", "(ｏ´∀｀)ﾉ", "(*´∀｀*)ﾉ", "(*ﾟｪﾟ*)ﾉ", "(o＾―＾)ﾉ", "(*'_`)ﾉ", "(*￣ω￣)ノ", "(ノ￣▽￣)", "(*'-'*)ﾉ", "(ｏ'∀'ｏ)ﾉ", "(｡・ω・｡)ﾉ", "(oﾟ∀ﾟo)ﾉ", "(*・∀-*)ﾉ", "(´・∀・｀)ﾉ", "(｀・∀・´)ﾉ", "(o´∀｀o)ﾉ", "(*´Д｀*)ﾉ", "( ´Д｀ )ﾉ", "(｡・∀・｡)ゝ", "(≧▽≦)ゞ", "(｡・ｗ・｡)ゝ", "(ｏﾟｪﾟｏ)ゝ", "(｡・_・｡)ゞ", "(｀・ω・´)ゞ", "(o'д`o)ゝ", "( ￣ー￣ )ゞ", "(｡・д・｡)ﾉｼ", "(´；ω；｀)ﾉｼ", "(；д；)ﾉｼ", "(´ゝ∀・｀)ﾉｼ", "(*´▽｀*)ﾉ))", "(´ω｀)ﾉｼ", "(*´Д｀*)ﾉ))", "(｡ﾉω<｡)ﾉ))", "(｡>∀<｡)ﾉｼ", "(*'Д'*)ﾉｼ", "(≧∀≦)ﾉ", "(*>∀<*)ゞ", "(ｏ'д')从('д'ｏ)", "(o・-・)从(・-・o)", "(=ﾟωﾟ)人(ﾟωﾟ=)", "(o´д｀)人(´д｀o)", "(oﾟдﾟ)爻(ﾟдﾟo)", "(*´・∀・)爻(・∀・｀*)"]
-  kaomoji_hi:
+  kao_hi:
     name: " (喜) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["ヽ(oﾟｪﾟo)ﾉ", "(bﾟｪﾟo)", "(*ﾉｪﾟ)b", "ﾟ+(*ﾉｪﾟ)b+ﾟ", "ヾ(*ﾟｪﾟ*)ﾉ", "ﾟ+(bﾟｪﾟ*)+ﾟ", "(ﾟ∀ﾟ)", "ヽ(ﾟ∀ﾟ)ﾉ", "ヽ(*ﾟ∀ﾟ*)ﾉ", "(´ﾟ∀ﾟ｀)", "(人ﾟ∀ﾟ*)", "∑d(ﾟ∀ﾟd)", "(σﾟ∀ﾟ)σ", "( ﾉﾟ∀ﾟ)ﾉ", "(ﾉ)ﾟ∀ﾟ(ヾ)", "(pﾟ∀ﾟq)", "ヽ(ｏﾟ∀ﾟｏ)ﾉ", "(ｏﾟ∀ﾟｏ)", "(oﾟ3ﾟb)b", "d(ﾟεﾟ*)", "ヽ(oﾟωﾟo)ﾉ", "(dﾟωﾟd)", "(´ー｀)", "ヽ(´ー｀)ﾉ", "(●´ー｀●)", "(n´―｀n)", "(´∀｀)", "ヽ(´∀｀)ﾉ", "ヽ(ｏ´∀｀ｏ)ﾉ", "(ﾉ)´∀｀(ヾ)", "(ﾉ´∀｀)ﾉ", "(σ´∀｀)σ", "(´▽｀)", "ヾ(*´▽｀*)ﾉ", "(´ω｀)", "ヽ(*´ｪ｀*)ﾉ", "(n´v｀n)", "(´皿｀)", "(b*´3｀*d)", "ヽ( ´3｀)ﾉ", "(∩´∀｀)∩", "((o(´∀｀)o))", "(ｏ'∀'ｏ)", "ヽ(*'▽'*)ﾉ", "(ｏ'∀')b", "(ｏ'∀'人)", "( *'ｗ')b", "ヽ('∀'*)ﾉ", "ヽ(* 'ー')ﾉ", "(o'ー'o)", "(人'ｗ'●)", "(●'ｗ'●)", "(b*'Д')b", "d( 'Д' d)", "(p*'∀`*q)", "q(q'∀`*)", "(bﾟv`*)", "(*ﾉv`)b", "ヾ(*'∀`*)ﾉ", "('∀`)", "ヾ(ﾟεﾟ*)ﾉ", "(p*'v`*q)", "(σ*'3`)σ", "(b'3`*)", "v(｀ゝω・´)", "ヽ(・∀・)ﾉ", "(｀・∀・´)", "(´・∀・｀)", "(｡ゝω・｡)ゞ", "(o´・ω-)b", "(｡ゝ∀・)b", "d(ゝ∀・*)", "(ﾉ｀・∀・)ﾉ", "(b・ω・d)", "(｡-∀-｡)", "(｡・ｗ・｡)", "ヾ(´・∀・)ﾉ", "ヽ(´・∀・｀)ﾉ", "ヽ(｡>▽<｡)ﾉ", "(｡>∀<｡)", "(σ≧∀≦)σ", "o(*>▽<*)o", "(≧∀≦)", "ヽ(≧▽≦)ﾉ", "(≧∇≦)", "♪(´ε｀ )", "(　*’ vw ’)", "(o’∀’o)", "ヽ(￣▽￣)ﾉ", "ヽ(*⌒▽⌒*)ﾉ", "(＾∀＾)", "(＾ω＾)", "( b＾ｪ＾)b", "(p＾ｪ＾q)", "ヽ(*＾ω＾*)ﾉ", "(p＾Д＾q)", "(o＾―＾o)", "ヽ(●＾▽＾●)ﾉ", "(￢_,￢)b", "(ωﾟｪ＾ω)", "ヽ(∀)ﾉ", "ζ*'ヮ')ζ", "ヽ(〃v〃)ﾉ", "ヽ(〃∀〃)ﾉ"]
-  kaomoji_nu:
+  kao_nu:
     name: " (怒) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["(ﾟДﾟ)", "ヽ(ﾟДﾟ)ﾉ", "(#ﾟДﾟ)", "(「 ﾟДﾟ)「", "(ﾟ⊿ﾟ)", "(ｷﾟ皿ﾟ)凸", "(#ﾟ皿ﾟ)", "(ﾟ皿ﾟ)", "(「ﾟ益ﾟ)「", "(´ﾟдﾟ｀#)", "щ(ﾟﾛﾟщ)", "щ(ﾟДﾟщ)", "ヽ(*｀3´)ﾉ", "(｀ε´*)", "(*｀益´*)", "(#｀益´)凸", "(*｀ｪ´*)", "ヽ(*｀ｪ´*)ﾉ", "(*｀ｴ´*)", "ヽ(*｀ｴ´*)ﾉ", "(｀ェ´)", "ヽ(｀ェ´)ﾉ", "(｀ω´)", "(p｀ω´q)", "(｀皿´)", "ヽ(｀皿´)ﾉ", "(#｀皿´)", "(〃*`Д´)", "(｀Д´)", "ヽ(｀Д´)ﾉ", "(*｀д´*)", "ヽ(*｀д´*)ﾉ", "(乂｀д´)", "(｀Д´乂)", "(｀・ω・´)", "(｀・Д・´)", "(｀・д・´)", "(｀・д´・ )", "(p｀・_・´q)", "(#・∀・)", "(｀‐ω‐´)", "( -'д-)y-~", "(・｀ｪ´・)", "(・｀д´・)", "(　｀_ゝ´)", "(　´_ゝ｀)", "(＇ｪ＇)", "(＇σェ＇)", "(＇д＇)", "(＇ε＇)", "(｡>皿<｡)", "(p>ω<q)", "(#￢д￢)", "(￣ε￣#)", "(ΦдΦ)", "(ｷΦдΦ)", "(#＾ω＾)", "<丶｀Д´>"]
-  kaomoji_oi:
+  kao_oi:
     name: " (哀) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["(´；Д；｀)", "(´；д；｀)", "( ；∀；)", "(ノ∀；｀)", "(´；ω；｀)", "(｀；ω；´)", "(；ω；)", "(ノω；｀)", "｡ﾟ(´pω・｀)ﾟ｡", "(｡pω-｡)", "(ノω・、)", "(ノ_・。)", "・ﾟ・(｡>Д<｡)・ﾟ・", "｡・ﾟ・(>д<)・ﾟ・｡", "(ﾟ´ω｀ﾟ)", "｡ﾟ(P'ω｀q)ﾟ｡", "｡ﾟ・(PД｀q )・ﾟ｡", "｡ﾟ(PД`q*)ﾟ｡", "・ﾟ・(ﾟ｀Д´ﾟ)・ﾟ・", "｡ﾟヽ(ﾟ｀Д´ﾟ)ﾉﾟ｡", "・ﾟ・(ノД`)・ﾟ・", "・ﾟ・(ﾟ´Д｀ﾟ)・ﾟ・", "｡ﾟ(ﾟ´Д｀ﾟ)ﾟ｡", "｡ﾟ(つД｀)ﾟ｡", "・ﾟ・(ﾟうｪ´ﾟ)・ﾟ・", "(ﾟうｪ´ﾟ)", "｡ﾟ(ﾟ´д｀ﾟ)ﾟ｡", "｡ﾟ(●'ω'o)ﾟ｡", "・ﾟ・(P'д`q｡)・ﾟ・", "｡ﾟ(p'д`q*)ﾟ｡", "・ﾟ・(*ﾉДﾉ)・ﾟ・", "｡ﾟ(｡pдq｡)ﾟ｡", "・ﾟ・(´pωq｀)・ﾟ・", "｡ﾟ(｡ﾉω＼｡)ﾟ｡", "｡+ﾟ・(pωq)・ﾟ+｡", "｡+ﾟ・(ﾉωヽ)・ﾟ+｡", "｡ﾟ(/□＼*)ﾟ｡", "｡・ﾟ・(*/□＼*)・ﾟ・｡", "(Ｔ┏_┓Ｔ)", "｡ﾟ(・´Д｀・)ﾟ｡", "・ﾟ・(*ﾉﾉ)・ﾟ・"]
-  kaomoji_lok:
+  kao_lok:
     name: " (樂) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["(〃ﾟ艸ﾟ)", "ﾟ・｡・(ﾉ∀ﾟ)σ・｡・ﾟ", "((*ﾟ∀ﾟ))", "((´ﾟ∀ﾟ｀))", "(ﾉ∀｀)", "｡ﾟ(ﾉ∀｀)ﾟ｡", "ﾟ・｡・(ﾉ∀｀)σ・｡・ﾟ", "｡ﾟ(ノ∀`*)ﾟ｡", "((´∀｀))", "((*´∀｀*))", "((´∀｀*))", "((´艸｀*))", "( *´艸｀)", "(　´艸｀)", "( *｀艸´)", "(　｀pq´)", "(*´pq｀)", "ﾟ・｡・(ﾉ皿｀)σ・｡・ﾟ", "(´∀ﾉ｀*)", "(´Oノ｀*)", "(´ｍ｀)", "(*ﾉε｀ )σ", "(*・艸・)", "(*-艸・*)", "(｡-艸-｡)", "(・∀・)", "(笑´・艸・)", "(｡ ゝ艸・)", "(｡ ﾉ∀<)σ", "(｡ >艸<)", "(*≧艸≦)", "(*≧▽≦)ﾉｼ))", "(*≧ｍ≦)", "(*≧pq≦)", "(￣∀￣)", "(￣ー￣)", "(*￣ｍ￣)", "(￣ｍ￣〃)", "( *＾皿＾)", "(( ＾∀＾ ))", "m9(＾Д＾)", "(＾Д＾)", "｡ﾟ(ﾟ＾ｪ＾ﾟ)ﾟ｡", "｡ﾟ(ﾟ＾∀＾ﾟ)ﾟ｡", "｡ﾟ(ﾟ＾Д＾ﾟ)ﾟ｡", "｡ﾟ(ﾟ＾д＾ﾟ)ﾟ｡", "｡ﾟ(ﾟ＾艸＾ﾟ)ﾟ｡", "｡ﾟ(ﾟ＾ω＾ﾟ)ﾟ｡", "(￢_,￢)", "(｡・´_,｀・｡)", "(-c_,-｀ )", "(｀c_,´　)", "(´ﾟc_,ﾟ｀ )", "(oﾟc_,ﾟo )", "(　´,_ゝ｀)", "(　・´ｰ・｀)", "(　´,_‥｀)", "(´‥_,｀ )"]
-  kaomoji_classic:
+  kao_classic:
     name: "顏文字"
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["o(^-^)o", "(^-^)/", "(^-^)", "(^-^ゞ", "p(^-^)q", "p(^-^q)", "(*^-^*)", "(^-^;", "(^_^)", "(^_^)/", "(^_^)v", "(^_-)-☆", "(*^_^*)", "(*^o^*)", "(^o^)", "(^o^)/", "(^o^)v", "(^o^)ゞ", "(^^)", "(*^^*)", "(^^;", "(^^ゞ", "(-_-)", "(-_-;)", "(ﾉ_-;)", "(T_T)", "(ToT)", "(ToT)/~", "(T-T)", "(T-T)/~", "(・_・)", "(・・;)", "(>_<)", "(；_；)", "(@_@)", "(~_~)", "(+_+)", "(*_*)", "m(__)m", "φ(。。)"]
-  kaomoji_ging:
+  kao_ging:
     name: " (驚) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["∑(*ﾟｪﾟ*)", "∑(*ﾟｪﾟﾉ)ﾉ", "((o´ｪﾟ))・;ﾞ.、", "∑(*ﾟωﾟ*)", "(´ﾟωﾟ)・*;'.、", "∑(ﾟωﾟﾉ)ﾉ", "∑L(ﾟ∀ﾟL)", "∑(ﾟ∀ﾟ」)」", "( ﾟ∀ﾟ)・;'.、", "∑(ﾟ∀ﾟﾉ)ﾉ", "(　ﾟдﾟ　)", "(´ﾟдﾟ｀)", "∑(ﾟдﾟ*)", "∑(ﾉ)ﾟдﾟ(ヾ)", "∑(*ﾟдﾟ艸)", "∑(*ﾟдﾟ*)", "∑(´д｀*)", "∑(ﾟﾛﾟ」)」", "∑(ﾟДﾟ )", "∑(ﾟДﾟ)", "(　ﾟДﾟ　)", "｀;:ﾞ｀;:ﾞ;｀(ﾟДﾟ*)", "∑(ﾟДﾟﾉ)ﾉ", "∑(*ﾟДﾟﾉ)ﾉ", "∑(´ﾟДﾟ｀)", "( ﾉﾟДﾟ)ﾉ", "∑(*ﾟ艸ﾟ*)", "∑(ﾟ艸ﾟ〃)", "∑(ﾟ◇ﾟﾉ)ﾉ", "∑(ﾟ益ﾟ*)", "∑(ﾟεﾟﾉ)ﾉ", "∑(´ε｀ﾉ)ﾉ", "∑(´д｀)", "∑(´▽｀ﾉ)ﾉ", "∑(□｀；)", "(*｀ﾛ´ﾉ)ﾉ", "∑(*´ω｀ﾉ)ﾉ", "∑(｀艸´*)", "∑(´Д｀)", "(；｀Д´ﾉ)ﾉ", "(　´Д｀)・;'.、", "∑(´Д｀ )", "∑(o'д'o)", "∑(*'д'*)", "∑('ω'ﾉ)ﾉ！", "∑('ω'ｏ)", "∑('A`)", "∑('∀`)", "∑(｡・Д・｡)", "∑(・Д・」)」", "(ﾉ・Д・)ﾉ", "∑( ・Д・ )", "∑(｀・д´・ )", "∑(｡・д・ﾉ)ﾉ", "∑(・ω・」)」", "∑(・ω・ﾉ)ﾉ！", "∑(-∀-ﾉ)ﾉ", "∑(・｀ω・ﾉ)ﾉ", "∑(｡>艸<｡)", "∑(OωO )", "(　 Д )　ﾟ　ﾟ", "∑(￣Д￣ )"]
-  kaomoji_hung:
+  kao_hung:
     name: " (恐) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["(；ﾟдﾟ)", "∑(ﾟдﾟ；)", "(llﾟдﾟ)", "(((；ﾟдﾟ；)))", "∑(´ﾟдﾟ｀；)", "(　ﾟдﾟ ；)", "((.;ﾟ;:Д:;ﾟ;.))", "(.;ﾟ;:д:;ﾟ;.)", "(llﾟдﾟll)", "((( ﾟдﾟ ;)))", "((( ；ﾟДﾟ)))", "(；ﾟДﾟ；)", "(ﾟДﾟ；)", "(llﾟДﾟﾉ)ﾉ", "(艸ﾟДﾟll)", "(；ﾟДﾟ艸)", "<( ﾟДﾟ；)>", "<(.;ﾟ;:Д:;ﾟ;.)>", "(；ﾟ∀ﾟ)", "(；´ﾟ∀ﾟ｀)", "∑(；ﾟωﾟﾉ)ﾉ", "( ﾟωﾟ；)", "(llﾟωﾟ)", "∑(´ﾟωﾟ｀；)", "ε=ε=ε= ┌(；´ﾟｪﾟ)┘", "(；ﾟｪﾟ；)", "<(llﾟ◇ﾟll)>", "(ﾟ◇ﾟ；)", "(llﾟ艸ﾟll)", "( ﾟ艸ﾟ；)", "(ﾟ-ﾟ；)", "└(ﾟﾛﾟ；)┘", "(；｀―´)ゞ", "(｀ヘ´；)ゞ", "(｀д´；)", "(｀艸´；)", "(；´д｀)ゞ", "(´Д｀ι)", "(；´д｀)", "(´д｀；)", "(ノ∀｀；)", "(´∀｀；)", "(；´ρ｀)", "( ´△｀；)", "(；´ｪ｀)", "(｀ェ´；)", "(；´Д`)", "(´ω`；)", "(((p'д`q)))", "(.;ﾟ;:益:;ﾟ;.)", "(｀・_・´；)", "(´・_・｀；)", "(；´・ω・)", "(・ω-｀；)", "(；-ω-)ゞ", "(-ω-；)", "(((p-д-q)))", "(=ω=；)", "(；´・3・｀)", "(・∀-｀；)", "(-∀-｀;)", "∑(-∀-｀；)", "(´-ε-｀;)", "(；´-∀-｀)ゞ", "(；・｀д・´)", "(｀・д´・；)", "(´・д｀・；)", "(´・д・｀；)", "(((*>д<*)))", "(；>艸<；)", "(；≧д≦)", "(≧ｗ≦；)", "(；'A`)", "(；＾ω＾)", "(；´v_v)ゞ", "(´u_u｀；)", "(；OдO)", "(≡Д≡；)", "(｡ω｡；)", "<(＠∑＠ll)>", "(T∀T；)", "<(T◇Tll)>", "(；￣Д￣)", "(￣∀￣；)", "(￣-￣；)", "(￣▼￣；)"]
-  kaomoji_jau:
+  kao_jau:
     name: " (憂) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["(´ﾟｪﾟ)", "(´ﾟｪﾟ｀)", "(≧Д≦)", "(´._.｀)", "(llﾟ益ﾟ)", "(´ﾟωﾟ｀)", "(´д｀)", "( ´д｀ll)", "( ´Д｀ )", "(ノД`ll)", "(´△｀)", "(´ρ｀)", "(｡´＿｀｡)", "(｡´_｀｡)", "┐(´д｀)┌", "(ノﾛ≦*)", "(´・ω・｀)", "∑>─(´・ω・｀)→", "(´・ω・)", "(・ω・｀)", "(´=ω=｀)", "(´+ω+｀)", "(´-ω-｀)", "(´xωx｀)", "(ノω=｀)", "(ノω・｀)", "(つω-｀)", "(つД-｀)", "(´・д・｀)", "ε-(´・д｀・ )", "(´・д・)", "(・д・｀)", "(´-д-)-3", "(ノд-｀)", "(ノ_・｡)", "(´・＿・｀)", "(｡´・_・｀｡)", "(´・_・｀)", "(´・　　ω　　・｀)", "(´・ ＿ ・｀)", "( ・´_・｀)", "(´・_｀・ )", "(―＿―)", "(-＿-)", "(｡・´_｀・｡)", "(・´_｀・)", "(´・3・｀)", "(´・ε・｀)", "(´・ｪ・｀)", "(´-ｪ-｀)", "(-言-)", "(-公- ll)", "(ll＇ｪ＇)", "(＇д＇ll)", "(´v_v｀)", "(´u_u｀)", "(ll＾ω＾)", "('A`)", "＼(＾o＾)／", "／(＾o＾)＼", "_(:3 」∠)_", "(:３っ　)へ", "(,'3 」∠)_", "(:3っ　)へ", "('､3_ヽ)_", "0('､3_ヽ)∋～", "0(,'3_ヽ)∋～", "0(:3　)～　('､3_ヽ)_", "_(8o 」∠)_", "_(┐「ε8)_", "_(┐「ε:)_", "[　　]ε`､)", "_(┐「ε`､)_", "_(　 _´･ω･)_", "_(　 _´･-･)_", "＿ﾉ乙(､ﾝ､)_", "ヽ(ﾟ､｡)ﾉ"]
-  kaomoji_sau:
+  kao_sau:
     name: " (羞) "
-    type: VAR_LENGTH
+    type: SINGLE
     keys: ["(*ﾟДﾟ)", "(*ﾟДﾟ*)", "(*ﾟдﾟ*)", "(〃ﾟдﾟ〃)", "(*´ﾟдﾟ｀*)", "(艸дﾟ*)", "(*ﾟ∀ﾟ*)", "(ﾉ∀ﾟ*)", "(*ﾟｪﾟ*)", "(#ﾟﾛﾟ#)", "(*ﾟーﾟ)", "(*ﾟーﾟ*)", "(*ﾟ益ﾟ)ゞ", "(*ﾟ益ﾟ*)ゞ", "(*ﾟヮﾟ*)", "(*ﾟvﾟ*)", "(*´∀｀*)", "(ﾉ∀｀*)", "(*´∀`)", "(*ﾉ∀`*)", "(∩∀｀*)", "(つ∀｀*)", "(*´ω｀*)ゞ", "(ノω｀*)", "(*´Д｀*)", "o┤*´Д｀*├o", "(*´ｪ｀*)", "(*´ェ｀*)", "(*´益｀*)", "(*｣´ｪ｀)｣", "(*´3｀*)ゞ", "(*ﾉε｀*)", "(*´ー｀*)", "(*´ｰ｀)ゞ", "(*´艸`)", "(*｀艸´)", "(*´艸｀*)", "(* ´_ゝ｀)", "(*'∀'*)", "(*'д'*)", "(*'ω'*)", "(*'ヮ'*)", "(*'-'*)", "(ﾉ)'ω`(ヾ)", "(*'.'*)", "(*'ｪ'*)", "((ﾉｪ`*)っ))", "((ﾉд`*)っ))", "(Pq'v`*)", "(ノv`*)", "(ノｗ`*)", "(*'ｪ`*)", "(*'д`*)", "o┤*'д`*├o", "(*´ｗ｀*)", "(*´・ｗ・｀*)", "(*-∀-)ゞ", "(*-∀-*)", "(*´=∀=)", "(・∀・｀*)", "(*・∀・)", "(*・∀・*)", "(*´・ω・)", "(*・д・*)", "(*・ε・*)", "(・ε・｀*)", "(*>ω<*)", "(´>∀<｀)ゝ", "(｡-_-｡)", "(｡・・｡)", "(〃∀〃)ゞ", "(ノ▽〃)", "(〃ω〃)", "(〃艸〃)", "(p〃д〃q)", "(*ｕдｕ)", "(*Vдv艸)", "(*￣∀￣)", "(ノ∀￣〃)", "(*≧∀≦)ゞ", "(//_q//)", "(//∀//)", "(//∇//)", "(*/▽＼*)", "(ﾉ∀＼*)", "(*ﾉ∀ﾉ)", "(*ﾉдﾉ)", "(〃ﾉωﾉ)", "(*pωq*)"]  
 
 # 鍵盤佈局
@@ -1992,7 +1990,6 @@ preset_keyboards:
     ascii_mode: 0
     reset_ascii_mode: true
     width: 11.5
-    height: 47
     keys:
       #第一行
       - {click: C_Hash, long_click: C_At, swipe_up: C_At, swipe_left: '¢', swipe_right: '€' , hint: '¢   €'}
@@ -2030,7 +2027,6 @@ preset_keyboards:
     author: 'Hoengsaan (Lingdai)'
     ascii_mode: 0
     width: 20
-    height: 47
     key_text_offset_y: -.4    #按鍵文本偏移（下正上負）
     key_symbol_offset_y: 1.6 #按鍵上方註釋偏移（下正上負）
     keys:
@@ -2283,8 +2279,6 @@ preset_keyboards:
     ascii_mode: 1
     reset_ascii_mode: true
     width: 9
-    #height: *26_key_height
-    #vertical_gap: *26_key_vert_gap
     key_hint_offset_y: *lower_hint_shift    #按鍵下方註釋偏移（下正上負）
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
@@ -3637,7 +3631,6 @@ preset_keyboards:
     ascii_mode: 0
     reset_ascii_mode: true
     width: 20
-    height: 47
     keys:
       #第一行
       - {click: Keyboard_English, key_text_size: 20, width: 10, long_click: Keyboard_English_ASCII, swipe_down: Keyboard_number, hint: '123'}
