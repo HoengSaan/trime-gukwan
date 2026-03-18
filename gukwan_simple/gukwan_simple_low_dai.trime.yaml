@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: 'v2.3'
+config_version: 'v2.3.1'
 name: 小菊韵底
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -1585,8 +1585,6 @@ tool_bar:
   button_spacing: 4
   buttons:
     - {action: VOICE_ASSIST, foreground: {style: "ic@microphone"}}
-    - {action: Right, foreground: {style: "ic@arrow-right-bold"}}
-    - {action: Left, foreground: {style: "ic@arrow-left-bold"}}
     - {action: Henkan, foreground: {option_styles: ["ic@translate-off", "ic@translate"]}}
     - {action: Punct_switch, foreground: {option_styles: ["ic@comma-circle", "ic@comma-circle-outline"]}}
     - {action: Zenkaku_Hankaku, foreground: {option_styles: ["ic@circle", "ic@circle-outline"]}}
