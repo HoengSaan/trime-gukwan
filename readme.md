@@ -55,21 +55,22 @@ This work is licensed under a
 
 ### 適配佈局
 
-- 粵拼：36鍵，適配[菊韻粵語](https://github.com/HoengSaan/rime-gukwan)，有反查快捷開關，**菊韵版有三拼提示**
-- 粵雙：37鍵，**菊韵・菊均有雙拼提示**
-- 倉頡：36鍵，適配[五代倉頡](https://github.com/rime/rime-cangjie)｜[六代倉頡](https://github.com/LEOYoon-Tsaw/Cangjie6)｜[速成]([rime/rime-quick: [速成]輸入方案](https://github.com/rime/rime-quick))｜[微軟速成](https://github.com/philipposkhos/rime-ms-quick)
-- 注音：40鍵，適配[大千式注音](https://github.com/rime/rime-bopomofo)
-- 行列：40鍵，適配[行列30](https://github.com/rime/rime-array/blob/master/array30.schema.yaml)
-- 普雙：36鍵，自然碼｜小鶴【限菊韵】
-- 九宮：9鍵，萬象九宮格｜霧凇九宮格｜菊韻九宮格（下劃直接輸入數字以輸入聲調）
+- 粵拼（gukwan）：36鍵，適配[菊韻粵語](https://github.com/HoengSaan/rime-gukwan)，有反查快捷開關，**菊韵版有三拼提示**
+- 粵雙（jyutsp）：37鍵，**菊韵・菊均有雙拼提示**
+- 倉頡（cangjie）：36鍵，適配[五代倉頡](https://github.com/rime/rime-cangjie)｜[六代倉頡](https://github.com/LEOYoon-Tsaw/Cangjie6)｜[速成]([rime/rime-quick: [速成]輸入方案](https://github.com/rime/rime-quick))｜[微軟速成](https://github.com/philipposkhos/rime-ms-quick)
+- 注音（bopomofo）：40鍵，適配[大千式注音](https://github.com/rime/rime-bopomofo)
+- 行列（array30）：40鍵，適配[行列30](https://github.com/rime/rime-array/blob/master/array30.schema.yaml)
+- 普雙（zrm_pinyin｜flypy）：36鍵，自然碼｜小鶴【限菊韵】
+- 九宮（t9）：9鍵，萬象九宮格｜霧凇九宮格｜菊韻九宮格（下劃直接輸入數字以輸入聲調）
   - 漢英混打須使用「英」打開36鍵鍵盤
 
 
-默認只有部分方案，手動適配方式如下：
+只有部分方案有適配佈局，其他方案手動適配方式如下：
 
 ```yaml
-  my_cangjie:
-    import_preset: cangjie5
+#適配九宮格佈局
+my_9key:
+    import_preset: t9
 ```
 
 ### 配色佈局
@@ -89,8 +90,6 @@ This work is licensed under a
   - 全角半角
   - 中標英標
   - 繁體簡體（僅限繁體方案並以「simplification」定義開關者 ）
-  - 光標向左
-  - 光標向右
   - 語音輸入
 
 | ![](/pic/1.jpg)                                              | ![](/pic/2.jpg)                                              |

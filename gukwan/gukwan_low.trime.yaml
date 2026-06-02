@@ -10,16 +10,16 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: 'v2.3.2'
+config_version: 'v2.3.3'
 name: 小菊韻
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
 height:
   - &36_key_height 68
-  - &sub_key_height 15
+  - &sub_key_height 50
   - &hor_gap 4
   - &36_key_vert_gap 6
-  - &ipa_key_height 46
+  - &ipa_key_height 50
   - &ipa_key_width 8.33333333333333
   - &ipa_2_key_width 16.666666666666666
   - &26_key_height 52
@@ -1928,7 +1928,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -2233,6 +2233,7 @@ preset_keyboards:
       - {click: 'щ'}
       - {click: 'з'}
       - {click: 'х'}
+      - {width: 0.5}
       #第二行
       - {width: 0.5}
       - {click: 'ф', long_click: 'ѳ'}
@@ -2248,8 +2249,7 @@ preset_keyboards:
       - {click: 'э', long_click: 'є', swipe_down: 'э́', hint: 'э́'}
       - {width: 0.5}
       #第三行
-      - {width: 0.5}
-      - {click: Shift_L, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: Shift_L, width: 9.5, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'я', long_click: 'я́'}
       - {click: 'ч'}
       - {click: 'с'}
@@ -2259,8 +2259,7 @@ preset_keyboards:
       - {click: 'ь', long_click: 'ъ', swipe_left: ';', swipe_right: ':', hint: ';   :'}
       - {click: 'б'}
       - {click: 'ю', long_click: 'ю́'}
-      - {click: BackSpace, swipe_down: Delete, hint: '▶︎', key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
-      - {width: 0.5}
+      - {click: BackSpace, swipe_down: Delete, hint: '▶︎', width: 9.5, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第四行
       - {click: Nothing, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', width: 10}
@@ -2822,7 +2821,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -2968,7 +2967,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3029,7 +3028,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3100,7 +3099,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3225,7 +3224,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3329,7 +3328,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3379,7 +3378,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
@@ -3441,7 +3440,7 @@ preset_keyboards:
     key_symbol_offset_y: *upper_hint_shift  #按鍵上方註釋偏移（下正上負）
     keys:
       #第一行
-      - {click: '1', long_click: '!', swipe_up: '!'}
+      - {click: '1', long_click: '!', swipe_up: '!', height: *sub_key_height}
       - {click: '2', long_click: '@', swipe_up: '@', swipe_left: '©', swipe_right: '®', hint: '©   ®'}
       - {click: '3', long_click: '#', swipe_up: '#', swipe_left: '℃', swipe_right: '℉', hint: '℃   ℉'}
       - {click: '4', long_click: '$', swipe_up: '$', swipe_left: '¢', swipe_right: '€', hint: '¢   €'}
