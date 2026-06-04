@@ -26,13 +26,13 @@ This work is licensed under a
 
 [【v1.0f】](https://github.com/HoengSaan/trime-gukwan/releases/tag/v1.0f)爲適配<u>同文v3.3.4</u>最後一個版本，經測試此版本亦可使用於<u>同文v3.3.8</u>，但Liquid_Keyboard部份功能不可用，剪貼板不可用。
 
-### 更新【v2.3.4】
+### 更新【v2.3.5】
 
-- 爲<u>同文v3.3.10</u>作適配
+- 增加備用字型Jigmo，調整字型調用方法同順序。
+- 編碼提示有顯示問題，暫時將其移去候選項後方。
 - 修復以下問題：
-  - 西里爾鍵盤在所有設備有不同程度之顯示異常，在部份設備其異常不能被忽視。
-  - 西里爾鍵盤在<u>同文v3.3.10</u>造成崩潰。
-  - Liquid Keyboard在<u>同文v3.3.10</u>有不能忽視之顯示異常。
+  - 在<u>同文v3.3.10</u>無法正確顯示字型。
+  - 微調高度以修正部分顯示問題。
 
 ### 派生說明
 
@@ -51,13 +51,15 @@ This work is licensed under a
     - 「**フリック**」：簡潔，基於12鍵佈局更改之20鍵佈局，濁音直出，小假名直出。
     - 「**五十音圖**（…50…｜-50-）」：繁雜，但支持更多特殊假名輸入，如愛奴語假名、臺語假名等。
 
-### 字體
+### 字型
 
-- WD-XL Lubrifont / WD-XL 滑油字：僅用於按鍵，來源爲[NightFurySL2001/WD-XL-font](NightFurySL2001/WD-XL-font)。由於**滑油字**闕失部份字符，<mark>部分佈局有闕字現象</mark>，不能接受者可使用其他字型。
-- Shanggu / 尚古：僅用於候選欄，來源爲[GuiWonder/Shanggu](https://github.com/GuiWonder/Shanggu)。由於**尚古**闕失部分罕有字，不能接受者可使用**字雲**、**天珩字庫**或其他字型。（亦可作爲後備字型設置）
-- Chocolate Classical Sans / 朱古力黑體：除按鍵・按鍵註釋・候選欄之外，來源爲[MoonlitOwen/ChocolateSans](https://github.com/MoonlitOwen/ChocolateSans)。
+- WD-XL Lubrifont / WD-XL 滑油字：來源爲[NightFurySL2001/WD-XL-font](NightFurySL2001/WD-XL-font)。由於**滑油字**闕失部份字符，<mark>會影響部分佈局觀感</mark>，不能接受者可用其他字型。
+- Shanggu / 尚古：來源爲[GuiWonder/Shanggu](https://github.com/GuiWonder/Shanggu)。
+- Chocolate Classical Sans / 朱古力黑體：來源爲[MoonlitOwen/ChocolateSans](https://github.com/MoonlitOwen/ChocolateSans)。
+- Fira Sans Extra Condensed：來源爲The Mozilla Foundation and Telefonica S.A.。
+- Jigmo / 字雲：後備字型，來源爲[kamichikoichi/jigmo](https://kamichikoichi.github.io/jigmo/)，隨源文件以[CC0 1.0許可](https://creativecommons.org/publicdomain/zero/1.0/deed)發佈
 
-以上文件皆隨源文件以[SIL Open Font License 1.1](https://openfontlicense.org/)發佈。
+以上文件如無加筆則皆隨源文件以[SIL 開放字型許可 1.1](https://openfontlicense.org/)發佈。
 
 ### 適配佈局
 
@@ -146,6 +148,6 @@ my_9key:
 
 - <del>不建議使用按鍵氣泡，顯示效果有問題。</del>
 - Liquid Keyboard按鍵顯示異常（萬年老問題，本人不能解決）
+- 編碼提示有顯示問題，暫時將其移去候選項後方。
 - 並無對橫屏介面做任何適配。
 - 菊韻主題各個版本並無互相依賴，選擇合適自身版本即可刪除其他版本。
-- 在v3.3.10字體未能正常顯示。

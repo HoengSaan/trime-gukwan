@@ -3,7 +3,7 @@
   candidate_padding: 7            #候選項內邊距
   candidate_spacing: 1            #候選項間隔
   candidate_text_size: 16         #候選項字號
-  candidate_view_height: 24       #候選區高度
+  candidate_view_height: 26       #候選區高度
   comment_text_size: 8            #候選項註釋字號
   comment_height: 12              #註釋區高度
   key_height: *36_key_height      #默認鍵高
