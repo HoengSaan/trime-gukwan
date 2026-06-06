@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: 'v2.3.5'
+config_version: 'v2.3.6'
 name: 菊韻五段
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -39,8 +39,8 @@ style:
   #功能設定
   auto_caps: false              #自動句首大寫: true|false|ascii
   candidate_use_cursor: true    #高亮候選項
-  #comment_position: top #編碼提示
-  comment_on_top: true          #編碼提示在上方/右側
+  #comment_position: top　　　　 #≧3.3.10編碼提示
+  comment_on_top: true          #＜3.3.10編碼提示
   horizontal: true              #水平模式
   proximity_correction: true    #避免按到縫隙
   reset_ascii_mode: true        #自動轉回中文
@@ -53,9 +53,9 @@ style:
   label_font: 
     - ShangguSansTC-Regular.ttf
   candidate_font: 
+    - FiraSansExtraCondensed-Regular.ttf
     - ShangguSansTC-Regular.ttf
   comment_font: 
-    - ChocolateClassicalSans-Regular.otf
     - FiraSansExtraCondensed-Regular.ttf
     - ShangguSansTC-Regular.ttf
   hanb_font:
@@ -78,7 +78,7 @@ style:
     - ShangguSansTC-Regular.ttf
   #尺寸
   text_size: 14                   #編碼字號
-  label_text_size: 20             #候選序號字號
+  label_text_size: 18.5             #候選序號字號
   candidate_padding: 8            #候選項內邊距
   candidate_spacing: 1            #候選項間隔
   candidate_text_size: 18         #候選項字號
@@ -1540,15 +1540,18 @@ preset_keys:
   Keyboard_emoji: {label: 繪, send: function, command: liquid_keyboard, option: ' 😀 '}
   Keyboard_kaomoji: {label: 顏, send: function, command: liquid_keyboard, option: '顏文字'}
   Keyboard_symbol: {label: 符, send: function, command: liquid_keyboard, option: ' 更多 '}
-  Keyboard_Greek_font: {label: 字型, sned: function, command: liquid_keyboard, option: '希臘字'}
-  Liquid_fixed_exit: {label: '   回   ', send: function, command: liquid_keyboard, option: "-1"}
-  Liquid_fixed_backspace: {label: '   ◀︎   ', repeatable: true, send: BackSpace}
-  Liquid_fixed_space: {label: '   ⎵   ', repeatable: true, functional: false, send: space}
-  Liquid_fixed_left: {label: ' ← ', send: Left}
-  Liquid_fixed_right: {label: ' → ', send: Right}
-  Liquid_fixed_return: {label: '   ⏎   ', repeatable: true, send: Return, functional: false}
-  Liquid_tabs: {label: '  ……  ', sned: function, command: liquid_keyboard, option: ' 更多 '}
-  clipboard_window: {label: '   ⏍   ', sned: function, command: clipboard_window}
+  Keyboard_Greek_font: {label: 字型, send: function, command: liquid_keyboard, option: '希字體'}
+  Keyboard_Greek_all: {label: 更多, send: function, command: liquid_keyboard, option: ' 希臘 '}
+  Keyboard_Latin_all: {label: 拉丁, send: function, command: liquid_keyboard, option: ' 拉丁 '}
+  Keyboard_Cyrillic_all: {label: 其他, send: function, command: liquid_keyboard, option: '西里爾'}
+  Keyboard_Hentaigana: {label: 變, send: function, command: liquid_keyboard, option: '變體假'}
+  Keyboard_Hangul_all: {label: 其他, send: function, command: liquid_keyboard, option: ' 諺文 '}
+  Liquid_fixed_exit: {label: ' 返回 ' , send: function, command: liquid_keyboard, option: "-1"}
+  Liquid_fixed_backspace: {label: ' 退格 ', repeatable: true, send: BackSpace}
+  Liquid_fixed_space: {label: ' 空格 ', repeatable: true, functional: false, send: space}
+  Liquid_fixed_return: {label: ' 換行 ', repeatable: true, send: Return, functional: false}
+  Liquid_tabs: {label: ' 更多 ', sned: function, command: liquid_keyboard, option: ' 更多 '}
+  clipboard_window: {label: ' 剪貼 ', sned: function, command: clipboard_window}
   menu_keyboard: {label: 菜單, sned: function, command: menu_keyboard}
   # 
   C_Caret: {label: '^', commit: '^', functional: false}
@@ -1631,7 +1634,7 @@ liquid_keyboard:
   row_land: 4         #橫屏每屏最多按鍵行數
   key_height: 42      #豎屏按鍵高度
   key_height_land: 18 #橫屏按鍵高度
-  single_width: 40    #single類型的按鍵寬度
+  single_width: 48    #single類型的按鍵寬度
   vertical_gap: 4     #縱向按鍵間隙
   margin_x: 2         #橫向按鍵間隙的一半
   fixed_key_bar:
@@ -1672,11 +1675,18 @@ liquid_keyboard:
     - symbol_latin
     - unit_latin
     - enclosed_latin
+    #- latin
+    - greek_font
+    #- greek
+    - cyrillic
     - symbol_CJK
     - unit_CJK
     - enclosed_CJK
     - datetime
     - bopomofo
+    - hentaigana
+    - otherkana
+    - hangul
     - arrow
     - arrow_all
     - music
@@ -1690,7 +1700,6 @@ liquid_keyboard:
     - dominos
     - signage
     - braille
-    - greek_font
     - hexagram
     - technical
     - mathematics
@@ -1823,6 +1832,18 @@ liquid_keyboard:
     name: ' 注音 '
     type: SINGLE
     keys: "ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄧㄨㄩㄪㄫㄬㄭㄮㄯㆠㆡㆢㆣㆤㆥㆦㆧㆨㆩㆪㆫㆬㆭㆮㆯㆰㆱㆲㆳㆴㆵㆶㆷㆸㆹㆺㆻㆼㆽㆾㆿˉˊˇˋ˙˪˫"
+  hentaigana:
+    name: '變體假'
+    type: SINGLE
+    keys: "𛀁𛀂𛀃𛀄𛀅𛀆𛀇𛀈𛀉𛀊𛀋𛀌𛀍𛀎𛀏𛀐𛀑𛀒𛀓𛀔𛀕𛀖𛀗𛀘𛀙𛀚𛀛𛀜𛀝𛀞𛀟𛀠𛀡𛀢𛀣𛀤𛀥𛀦𛀧𛀨𛀩𛀪𛀫𛀬𛀭𛀮𛀯𛀰𛀱𛀲𛀳𛀴𛀵𛀶𛀷𛀸𛀹𛀺𛀻𛀼𛀽𛀾𛀿𛁀𛁁𛁂𛁃𛁄𛁅𛁆𛁇𛁈𛁉𛁊𛁋𛁌𛁍𛁎𛁏𛁐𛁑𛁒𛁓𛁔𛁕𛁖𛁗𛁘𛁙𛁚𛁛𛁜𛁝𛁞𛁟𛁠𛁡𛁢𛁣𛁤𛁥𛁦𛁧𛁨𛁩𛁪𛁫𛁬𛁭𛁮𛁯𛁰𛁱𛁲𛁳𛁴𛁵𛁶𛁷𛁸𛁹𛁺𛁻𛁼𛁽𛁾𛁿𛂀𛂁𛂂𛂃𛂄𛂅𛂆𛂇𛂈𛂉𛂊𛂋𛂌𛂍𛂎𛂏𛂐𛂑𛂒𛂓𛂔𛂕𛂖𛂗𛂘𛂙𛂚𛂛𛂜𛂝𛂞𛂟𛂠𛂡𛂢𛂣𛂤𛂥𛂦𛂧𛂨𛂩𛂪𛂫𛂬𛂭𛂮𛂯𛂰𛂱𛂲𛂳𛂴𛂵𛂶𛂷𛂸𛂹𛂺𛂻𛂼𛂽𛂾𛂿𛃀𛃁𛃂𛃃𛃄𛃅𛃆𛃇𛃈𛃉𛃊𛃋𛃌𛃍𛃎𛃏𛃐𛃑𛃒𛃓𛃔𛃕𛃖𛃗𛃘𛃙𛃚𛃛𛃜𛃝𛃞𛃟𛃠𛃡𛃢𛃣𛃤𛃥𛃦𛃧𛃨𛃩𛃪𛃫𛃬𛃭𛃮𛃯𛃰𛃱𛃲𛃳𛃴𛃵𛃶𛃷𛃸𛃹𛃺𛃻𛃼𛃽𛃾𛃿𛄀𛄁𛄂𛄃𛄄𛄅𛄆𛄇𛄈𛄉𛄊𛄋𛄌𛄍𛄎𛄏𛄐𛄑𛄒𛄓𛄔𛄕𛄖𛄗𛄘𛄙𛄚𛄛𛄜𛄝𛄞"
+  otherkana:
+    name: ' 假名 '
+    type: SINGLE
+    keys: "𛀀𛄟𛄠𛄡𛄢ゟ𬼂𬻿𬼀ヿ𪜈ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕ゙゚゛゜ ゝゞ𛄲𛅐𛅑𛅒゠ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶヷヸヹヺ・ーヽヾㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ𛅕𛅤𛅥𛅦𛅧"
+  hangul:
+    name: ' 諺文 '
+    type: SINGLE
+    keys: "ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛᄜᄝᄞᄟᄠᄡᄢᄣᄤᄥᄦᄧᄨᄩᄪᄫᄬᄭᄮᄯᄰᄱᄲᄳᄴᄵᄶᄷᄸᄹᄺᄻᄼᄽᄾᄿᅀᅁᅂᅃᅄᅅᅆᅇᅈᅉᅊᅋᅌᅍᅎᅏᅐᅑᅒᅓᅔᅕᅖᅗᅘᅙᅚᅛᅜᅝᅞᅟᅠᅡᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲᅳᅴᅵᅶᅷᅸᅹᅺᅻᅼᅽᅾᅿᆀᆁᆂᆃᆄᆅᆆᆇᆈᆉᆊᆋᆌᆍᆎᆏᆐᆑᆒᆓᆔᆕᆖᆗᆘᆙᆚᆛᆜᆝᆞᆟᆠᆡᆢᆣᆤᆥᆦᆧᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆳᆴᆵᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂᇃᇄᇅᇆᇇᇈᇉᇊᇋᇌᇍᇎᇏᇐᇑᇒᇓᇔᇕᇖᇗᇘᇙᇚᇛᇜᇝᇞᇟᇠᇡᇢᇣᇤᇥᇦᇧᇨᇩᇪᇫᇬᇭᇮᇯᇰᇱᇲᇳᇴᇵᇶᇷᇸᇹᇺᇻᇼᇽᇾᇿꥠꥡꥢꥣꥤꥥꥦꥧꥨꥩꥪꥫꥬꥭꥮꥯꥰꥱꥲꥳꥴꥵꥶꥷꥸꥹꥺꥻꥼힰힱힲힳힴힵힶힷힸힹힺힻힼힽힾힿퟀퟁퟂퟃퟄퟅퟆퟋퟌퟍퟎퟏퟐퟑퟒퟓퟔퟕퟖퟗퟘퟙퟚퟛퟜퟝퟞퟟퟠퟡퟢퟣퟤퟥퟦퟧퟨퟩퟪퟫퟬퟭퟮퟯퟰퟱퟲퟳퟴퟵퟶퟷퟸퟹퟺퟻ"
   arrow:
     name: ' 箭嘴 '
     type: SINGLE
@@ -1879,9 +1900,13 @@ liquid_keyboard:
     type: SINGLE
     keys: "⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿"
   greek_font:
-    name: '希臘字'
+    name: 希字體
     type: SINGLE
     keys: "𝚨𝚩𝚪𝚫𝚬𝚭𝚮𝚯𝚰𝚱𝚲𝚳𝚴𝚵𝚶𝚷𝚸𝚹𝚺𝚻𝚼𝚽𝚾𝚿𝛀𝛁𝛂𝛃𝛄𝛅𝛆𝛇𝛈𝛉𝛊𝛋𝛌𝛍𝛎𝛏𝛐𝛑𝛒𝛓𝛔𝛕𝛖𝛗𝛘𝛙𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸𝛹𝛺𝛻𝛼𝛽𝛾𝛿𝜀𝜁𝜂𝜃𝜄𝜅𝜆𝜇𝜈𝜉𝜊𝜋𝜌𝜍𝜎𝜏𝜐𝜑𝜒𝜓𝜔𝜕𝜖𝜗𝜘𝜙𝜚𝜛𝜜𝜝𝜞𝜟𝜠𝜡𝜢𝜣𝜤𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱𝜲𝜳𝜴𝜵𝜶𝜷𝜸𝜹𝜺𝜻𝜼𝜽𝜾𝜿𝝀𝝁𝝂𝝃𝝄𝝅𝝆𝝇𝝈𝝉𝝊𝝋𝝌𝝍𝝎𝝏𝝐𝝑𝝒𝝓𝝔𝝕𝝖𝝗𝝘𝝙𝝚𝝛𝝜𝝝𝝞𝝟𝝠𝝡𝝢𝝣𝝤𝝥𝝦𝝧𝝨𝝩𝝪𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸℩𝝹𝝺𝝻𝝼𝝽𝝾𝝿𝞀𝞁𝞂𝞃𝞄𝞅𝞆𝞇𝞈𝞉𝞊𝞋𝞌𝞍𝞎𝞏𝞐𝞑𝞒𝞓𝞔𝞕𝞖𝞗𝞘𝞙𝞚𝞛𝞜𝞝𝞞𝞟𝞠𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃𝟄𝟅𝟆𝟇𝟈𝟉ℾℿ⅀ℽ"
+  cyrillic:
+    name: '西里爾'
+    type: SINGLE
+    keys: "ЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҇҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎӏӐӑӒӓӔӕӖӗӘәӚӛӜӝӞӟӠӡӢӣӤӥӦӧӨөӪӫӬӭӮӯӰӱӲӳӴӵӶӷӸӹӺӻӼӽӾӿԀԁԂԃԄԅԆԇԈԉԊԋԌԍԎԏԐԑԒԓԔԕԖԗԘԙԚԛԜԝԞԟԠԡԢԣԤԥԦԧԨԩԪԫԬԭԮԯꙀꙁꙂꙃꙄꙅꙆꙇꙈꙉꙊꙋꙌꙍꙎꙏꙐꙑꙒꙓꙔꙕꙖꙗꙘꙙꙚꙛꙜꙝꙞꙟꙠꙡꙢꙣꙤꙥꙦꙧꙨꙩꙪꙫꙬꙭꙮ꙯꙰꙱꙲꙳ꙴꙵꙶꙷꙸꙹꙺꙻ꙼꙽꙾ꙿꚀꚁꚂꚃꚄꚅꚆꚇꚈꚉꚊꚋꚌꚍꚎꚏꚐꚑꚒꚓꚔꚕꚖꚗꚘꚙꚚꚛꚜꚝꚞꚟꚠꚡꚢꚣꚤꚥꚦꚧꚨꚩꚪꚫꚬꚭꚮꚯꚰꚱꚲꚳꚴꚵꚶꚷꚸꚹꚺꚻꚼꚽꚾꚿꛀꛁꛂꛃꛄꛅꛆꛇꛈꛉꛊꛋꛌꛍꛎꛏꛐꛑꛒꛓꛔꛕꛖꛗꛘꛙꛚꛛꛜꛝꛞꛟꛠꛡꛢꛣꛤꛥꛦꛧꛨꛩꛪꛫꛬꛭꛮꚀꚁꚂꚃꚄꚅꚆꚇꚈꚉꚊꚋꚌꚍꚎꚏꚐꚑꚒꚓꚔꚕꚖꚗꚘꚙꚚꚛᲀᲁᲂᲃᲄᲅᲆᲇᲈᲉᲊᴫᵸⷠⷡⷢⷣⷤⷥⷦⷧⷨⷩⷪⷫⷬⷭⷮⷯⷰⷱⷲⷳⷴⷵⷶⷷⷸⷹⷺⷻⷼⷽⷾⷿ꙯꙰꙱꙲꙳ꙴꙵꙶꙷꙸꙹꙺꙻ꙼꙽꙾ꙿꚜꚝꚞꚟ𞀰𞀱𞀲𞀳𞀴𞀵𞀶𞀷𞀸𞀹𞀺𞀻𞀼𞀽𞀾𞀿𞁀𞁁𞁂𞁃𞁄𞁅𞁆𞁇𞁈𞁉𞁊𞁋𞁌𞁍𞁎𞁏𞁐𞁑𞁒𞁓𞁔𞁕𞁖𞁗𞁘𞁙𞁚𞁛𞁜𞁝𞁞𞁟𞁠𞁡𞁢𞁣𞁤𞁥𞁦𞁧𞁨𞁩𞁪𞁫𞁬𞁭𞂏︮︯"
   hexagram:
     name: ' 易卦 '
     type: SINGLE
@@ -2256,7 +2281,7 @@ preset_keyboards:
       - {click: 'ю', long_click: 'ю́'}
       - {click: BackSpace, swipe_down: Delete, hint: '▶︎', key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第四行
-      - {click: Nothing, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: Keyboard_Cyrillic_all, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', width: 10}
       - {click: Alt_space, width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.', width: 10}
@@ -2691,7 +2716,7 @@ preset_keyboards:
       - {click: 'ぱ', swipe_left: 'ぴ', swipe_up: 'ぷ', swipe_right: 'ぺ', swipe_down: 'ぽ', key_text_color: one_color, key_text_size: 24}
       - {click: Right, key_text_size: 24, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第四行
-      - {click: Keyboard_Katakana, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: Keyboard_Katakana, long_click: Keyboard_Hentaigana, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'ま', swipe_left: 'み', swipe_up: 'む', swipe_right: 'め', swipe_down: 'も', key_text_size: 24}
       - {click: 'や', swipe_left: 'い', swipe_up: 'ゆ', swipe_right: '𛀁', swipe_down: 'よ', key_text_size: 24}
       - {click: 'ら', swipe_left: 'り', swipe_up: 'る', swipe_right: 'れ', swipe_down: 'ろ', key_text_size: 24}
@@ -2732,7 +2757,7 @@ preset_keyboards:
       - {click: 'パ', swipe_left: 'ピ', swipe_up: 'プ', swipe_right: 'ペ', swipe_down: 'ポ', key_text_color: one_color, key_text_size: 24}
       - {click: Right, key_text_size: 24, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第四行
-      - {click: Keyboard_Hiragana, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: Keyboard_Hiragana, long_click: Keyboard_Hentaigana, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'マ', swipe_left: 'ミ', swipe_up: 'ム', swipe_right: 'メ', swipe_down: 'モ', key_text_size: 24}
       - {click: 'ヤ', swipe_left: 'イ', swipe_up: 'ユ', swipe_right: 'エ', swipe_down: 'ヨ', key_text_size: 24}
       - {click: 'ラ', swipe_left: 'リ', swipe_up: 'ル', swipe_right: 'レ', swipe_down: 'ロ', key_text_size: 24}
@@ -2790,7 +2815,7 @@ preset_keyboards:
       - {click: 'ᅳ', swipe_down: 'ᅴ', hint: 'ㅢ'}
       - {click: BackSpace, swipe_down: Delete, hint: '▶︎', width: 10, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       #第四行
-      - {click: Nothing, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
+      - {click: Keyboard_Hangul_all, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: ',', label: ，, long_click: '、', swipe_up: '、', key_text_color: one_color}
       - {click: Alt_space, hint: '有限度支持古諺文', width: 49, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
       - {click: '.', label: 。, long_click: '?', swipe_up: '?', swipe_down: '・', hint: '･', key_text_color: one_color}
