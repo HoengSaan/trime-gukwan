@@ -17,25 +17,21 @@ This work is licensed under a
 
 ### 其他菊韻項目
 
-- 菊韻粵語：[rime-gukwan: 菊韻粵語輸入方案 基於中州韻 Cantonese IME (RIME Scheme)](https://github.com/HoengSaan/rime-gukwan)
-- 菊韻和語（停止維護）：[rime-kikwin: 菊韻日本語入力法 基於中州韻 Japanese IME (RIME Scheme)](https://github.com/HoengSaan/rime-kikwin)
+- 菊韻粵語：[rime-gukwan: 菊韻粵語拼音輸入方案 基於中州韻 Gukwan Cantonese Jyutping IME (RIME Scheme)](https://github.com/HoengSaan/rime-gukwan)
+- 菊韻諺文：[rime-gugun: 菊韻諺文輸入法 音碼 基於中州韻 Gukwan Hangul IME (Rime Scheme)](https://github.com/HoengSaan/rime-gugun)
+- 菊韻和語【停止維護】：[rime-kikwin: 菊韻日本語入力法 基於中州韻 Gukwan Japanese IME (RIME Scheme)](https://github.com/HoengSaan/rime-kikwin)
 
 ## 介紹
 
-菊韻使用36+鍵佈局（QWERTY字母鍵26個＋一行數字鍵10個），配色多樣，自帶多種鍵盤，適配多種佈局。
+菊韻使用36+/26+鍵佈局（QWERTY字母鍵26個＋一行數字鍵10個），配色多樣，自帶多種鍵盤，適配多種佈局。
 
 [【v1.0f】](https://github.com/HoengSaan/trime-gukwan/releases/tag/v1.0f)爲適配<u>同文v3.3.4</u>最後一個版本，經測試此版本亦可使用於<u>同文v3.3.8</u>，但Liquid_Keyboard部份功能不可用，剪貼板不可用。
 
-### 更新【v2.3.6】
+### 更新【v2.3.7】
 
-- 移除字型「Chocolate Classical Sans / 朱古力黑體」，調整字型調用。
-- 微調字體大小、部份佈局、Liquid Keyboard。
-- Liquid Keyboard新增：
-  - 假名
-  - 諺文（不含諺文音節、全形諺文部件）
-  - 西里爾
-- 修復以下問題：
-  - Liquid Keyboard部分顯示問題
+- Liquid Keyboard調整諺文，新增希臘
+- 修正粵雙佈局小問題
+- 爲菊韻諺文進行適配
 
 ### 派生說明
 
@@ -66,6 +62,7 @@ This work is licensed under a
 ### 適配佈局
 
 - 粵拼（gukwan）：36鍵，適配[菊韻粵語](https://github.com/HoengSaan/rime-gukwan)，有反查快捷開關，**菊韵版有三拼提示**
+- 諺文（gugun）：37鍵，適配[菊韻諺文](https://github.com/HoengSaan/rime-gugun)
 - 粵雙（jyutsp）：37鍵，**菊韵・菊均有雙拼提示**
 - 倉頡（cangjie）：36鍵，適配[五代倉頡](https://github.com/rime/rime-cangjie)｜[六代倉頡](https://github.com/LEOYoon-Tsaw/Cangjie6)｜[速成]([rime/rime-quick: [速成]輸入方案](https://github.com/rime/rime-quick))｜[微軟速成](https://github.com/philipposkhos/rime-ms-quick)
 - 注音（bopomofo）：40鍵，適配[大千式注音](https://github.com/rime/rime-bopomofo)
