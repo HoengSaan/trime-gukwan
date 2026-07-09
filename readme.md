@@ -27,11 +27,10 @@ This work is licensed under a
 
 [【v1.0f】](https://github.com/HoengSaan/trime-gukwan/releases/tag/v1.0f)爲適配<u>同文v3.3.4</u>最後一個版本，經測試此版本亦可使用於<u>同文v3.3.8</u>，但Liquid_Keyboard部份功能不可用，剪貼板不可用。
 
-### 更新【v2.3.7】
+### 更新【v2.3.8】
 
-- Liquid Keyboard調整諺文，新增希臘
-- 修正粵雙佈局小問題
-- 爲菊韻諺文進行適配
+- 微調諺文佈局 (rime-gugun v1.4.1)
+- 微調音標佈局
 
 ### 派生說明
 

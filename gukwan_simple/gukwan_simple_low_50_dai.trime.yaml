@@ -10,7 +10,7 @@
 # Learn how to use Gukwan in the readme file, available on the project's github page.
 # Source: https://github.com/Wenti-D/Astralwelkin
 
-config_version: 'v2.3.7'
+config_version: 'v2.3.8'
 name: 小菊韵50底
 author: 'Windy_D <windy0deng@gmail.com>, Hoengsaan (Lingdai)'
 
@@ -1494,6 +1494,7 @@ preset_keys:
   IPA_low_rising: {label: '◌᷅', text: "᷅"}
   IPA_rising_falling: {label: '◌᷈', text: "᷈"}
   IPA_aspirated: {label: '◌ʰ', text: 'ʰ', functional: false}
+  IPA_aspirated_voiced: {label: '◌ʱ', text: 'ʱ', functional: false}
   IPA_glottalized: {label: '◌ˀ', text: 'ˀ', functional: false}
   IPA_nasalized_glottalized: {label: '◌̃ˀ', text: '̃ˀ', functional: false}
   IPA_voiceless_below: {label: '◌̥', text: '̥', functional: false}
@@ -2332,8 +2333,8 @@ preset_keyboards:
       - {width: 6.5}
 
   IPA1:
-    name: 國際音標鍵盤（第一頁）
-    author: 'Windy_D'
+    name: 音標鍵盤一
+    author: 'Windy_D, Hoengsaan (Lingdai)'
     ascii_mode: 1
     reset_ascii_mode: true
     width: *ipa_key_width
@@ -2412,7 +2413,7 @@ preset_keyboards:
       - {click: Keyboard_IPA_symbol_1, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'ˈ', width: 10}
       - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
-      - {click: IPA_aspirated, width: 10}
+      - {click: '/', long_click: IPA_aspirated, swipe_left: '[', swipe_right: ']', hint: '[ ]', width: 10}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第七行
@@ -2426,8 +2427,8 @@ preset_keyboards:
       - {width: 6.5}
 
   IPA2:
-    name: 國際音標鍵盤（第二頁）
-    author: 'Windy_D'
+    name: 音標鍵盤二
+    author: 'Windy_D, Hoengsaan (Lingdai)'
     ascii_mode: 1
     reset_ascii_mode: true
     width: *ipa_key_width
@@ -2504,7 +2505,7 @@ preset_keyboards:
       - {click: Keyboard_IPA_symbol_1, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'ˈ', width: 10}
       - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
-      - {click: IPA_aspirated, width: 10}
+      - {click: '/', long_click: IPA_aspirated, swipe_left: '[', swipe_right: ']', hint: '[ ]', width: 10}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第七行
@@ -2518,8 +2519,8 @@ preset_keyboards:
       - {width: 6.5}
 
   IPA3:
-    name: 國際音標鍵盤（第三頁）
-    author: 'Windy_D'
+    name: 音標鍵盤三
+    author: 'Windy_D, Hoengsaan (Lingdai)'
     ascii_mode: 1
     reset_ascii_mode: true
     width: *ipa_key_width
@@ -2598,7 +2599,7 @@ preset_keyboards:
       - {click: Keyboard_IPA_symbol_1, width: 15, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: 'ˈ', width: 10}
       - {click: Alt_space, width: 39, swipe_up: Up, swipe_left: Left, swipe_right: Right, swipe_down: Down}
-      - {click: IPA_aspirated, width: 10}
+      - {click: '/', long_click: IPA_aspirated, swipe_left: '[', swipe_right: ']', hint: '[ ]', width: 10}
       - {click: '.', width: 10}
       - {click: Return, width: 16, key_text_size: 24, key_text_offset_y: -2, key_back_color: enter_bg_color, key_text_color: enter_text_color, hilited_key_back_color: enter_pressed_bg_color, hilited_key_text_color: enter_pressed_text_color}
       #第七行
@@ -2612,7 +2613,7 @@ preset_keyboards:
       - {width: 6.5}
 
   IPA_symbol_1:
-    name: 國際音標符號（第一頁）
+    name: 音標符號一
     author: 'Windy_D'
     ascii_mode: 1
     reset_ascii_mode: true
@@ -2669,8 +2670,8 @@ preset_keyboards:
       - {width: 6.5}
 
   IPA_symbol_2:
-    name: 國際音標符號（第二頁）
-    author: 'Windy_D'
+    name: 音標符號二
+    author: 'Windy_D, Hoengsaan (Lingdai)'
     ascii_mode: 1
     reset_ascii_mode: true
     width: 10
@@ -2703,7 +2704,7 @@ preset_keyboards:
       - {click: Keyboard_IPA_symbol_1, width: 14, key_text_offset_y: 0, key_back_color: off_key_back_color, key_text_color: off_key_text_color, hilited_key_back_color: hilited_off_key_back_color, hilited_key_text_color: hilited_off_key_text_color}
       - {click: IPA_voiceless_below, long_click: IPA_voiceless_above}
       - {click: IPA_voiced}
-      - {click: IPA_aspirated}
+      - {click: IPA_aspirated, long_click: IPA_aspirated_voiced}
       - {click: IPA_breathy_voiced}
       - {click: IPA_creaky_voiced}
       - {click: IPA_nasalized}
@@ -3190,7 +3191,7 @@ preset_keyboards:
     keys:
       #第二行
       - {click: 'q', hint: 'ㅇ', long_click: '`', swipe_up: '`'}
-      - {click: 'w', hint: 'ㅜ', long_click: ':', swipe_up: ':'}
+      - {click: 'w', hint: '終', long_click: ':', swipe_up: ':'}
       - {click: 'e', hint: 'ㅓ', long_click: ';', swipe_up: ';'}
       - {click: 'r', hint: 'ㅿ', long_click: "'", swipe_up: "'"}
       - {click: 't', hint: 'ㅌ', long_click: '"', swipe_up: '"'}
